@@ -1,16 +1,23 @@
-import { FunctionComponent, useCallback } from "react";
+import { FunctionComponent, useCallback, useState } from "react";
+import Form from "./Form"; // Assicurati che il percorso del componente Form sia corretto
 
 export type NavbarType = {
   className?: string;
 };
 
 const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
+  const [showForm, setShowForm] = useState(false);
+
   const scrollToSection = useCallback((section: string) => {
     const anchor = document.querySelector(`[data-scroll-to='${section}']`);
     if (anchor) {
       anchor.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, []);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
 
   return (
     <div
@@ -46,8 +53,16 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             <div className="relative font-medium">F.A.Q.</div>
           </div>
         </div>
-        <div className="self-stretch bg-verde-1-findora flex flex-row items-center justify-center py-0 px-[60px] text-5xl">
+        <div
+          className="self-stretch bg-verde-1-findora flex flex-row items-center justify-center py-0 px-[60px] text-5xl cursor-pointer"
+          onClick={toggleForm}
+        >
           <b className="relative">LISTA D’ATTESA</b>
+          {showForm && (
+            <div className="absolute left-0 w-full mt-2 top-full">
+              <Form className="max-w-[840px] mx-auto" />
+            </div>
+          )}
         </div>
       </div>
     </div>

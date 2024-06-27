@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 
 export type FormType = {
   className?: string;
@@ -8,6 +8,12 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
   const handleSubmit = () => {
     // Funzione per gestire l'invio del form
     console.log("Form submitted");
+  };
+
+  const [isOptionOpen, setIsOptionOpen] = useState(false);
+
+  const toggleOption = () => {
+    setIsOptionOpen(!isOptionOpen);
   };
 
   return (
@@ -42,11 +48,29 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-5 px-10 box-border min-w-[370px] text-center text-base text-bianco-1-findora">
-              <select className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start">
+              {/* <select className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start">
                 <option value="">Seleziona un'opzione</option>
                 <option value="opzione1">Opzione 1</option>
                 <option value="opzione2">Opzione 2</option>
-              </select>
+              </select> */}
+              <div className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start py-0 px-[15px] box-border cursor-pointer">
+                <b
+                  className="relative flex items-center self-stretch justify-center flex-1"
+                  onClick={toggleOption}
+                >
+                  SELEZIONA UNA OPZIONE
+                </b>
+                {isOptionOpen && (
+                  <b className="relative flex items-center self-stretch justify-center flex-1">
+                    FREELENCER
+                  </b>
+                )}
+                {isOptionOpen && (
+                  <b className="relative flex items-center self-stretch justify-center flex-1">
+                    UTENTE
+                  </b>
+                )}
+              </div>
             </div>
             <div className="flex flex-col items-start self-stretch justify-start">
               <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border min-w-[370px]">

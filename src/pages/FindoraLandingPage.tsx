@@ -47,7 +47,6 @@ const FindoraLandingPage: FunctionComponent = () => {
       >
         <Navbar />
       </div>
-      <Form />
       {/* PRESENTAZIONE */}
       <PresentazionePage />
       {/* BENEFIT: */}
