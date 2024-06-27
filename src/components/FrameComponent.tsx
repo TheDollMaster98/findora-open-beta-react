@@ -5,6 +5,9 @@ export type FrameComponentType = {
   prop?: string;
   cosFindora?: string;
   findoraUnaMarketplaceCheM?: string;
+
+  /** Style props */
+  textClassName?: string;
 };
 
 const FrameComponent: FunctionComponent<FrameComponentType> = ({
@@ -12,6 +15,7 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
   prop,
   cosFindora,
   findoraUnaMarketplaceCheM,
+  textClassName = "",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,9 +27,13 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
     <div
       className={`self-stretch flex flex-col items-start justify-start py-[1.875rem] pr-[3.75rem] pl-[1.875rem] text-center text-[2rem] text-nero-3-findora font-gotham border-[4px] border-solid border-nero-3-findora ${className}`}
     >
-      <div className="self-stretch flex flex-col items-start justify-start gap-[0.937rem]">
+      <div
+        className={`self-stretch flex flex-col items-start justify-start gap-[0.937rem] ${textClassName}`}
+      >
         <div className="flex flex-row items-start self-stretch justify-start">
-          <div className="w-[4.688rem] relative font-medium flex items-center justify-center shrink-0">
+          <div
+            className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0`}
+          >
             {prop}
           </div>
         </div>
