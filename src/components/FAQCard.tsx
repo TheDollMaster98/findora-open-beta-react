@@ -26,6 +26,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
   return (
     <div
       className={`self-stretch flex flex-col items-start justify-start py-[1.875rem] pr-[3.75rem] pl-[1.875rem] text-center text-[2rem] text-nero-3-findora font-gotham border-[4px] border-solid border-nero-3-findora ${className}`}
+      onClick={toggleOpen}
     >
       <div
         className={`self-stretch flex flex-col items-start justify-start gap-[0.937rem] ${textClassName}`}
@@ -43,10 +44,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
               <div className="w-[4rem] relative box-border h-[0.25rem] border-t-[4px] border-solid border-verde-1-findora" />
             </div>
             <b className="relative flex-1">{cosFindora}</b>
-            <div
-              className="flex flex-row items-center self-stretch justify-center cursor-pointer"
-              onClick={toggleOpen}
-            >
+            <div className="flex flex-row items-center self-stretch justify-center cursor-pointer">
               <div className="flex flex-col items-start justify-start">
                 <img
                   className="w-[1.875rem] relative"
