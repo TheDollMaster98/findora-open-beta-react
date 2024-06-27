@@ -43,7 +43,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             className="self-stretch flex flex-col items-center justify-center p-2.5 cursor-pointer"
             onClick={() => scrollToSection("faq")}
           >
-            <div className="relative font-medium">F.A.Q</div>
+            <div className="relative font-medium">F.A.Q.</div>
           </div>
         </div>
         <div className="self-stretch bg-verde-1-findora flex flex-row items-center justify-center py-0 px-[60px] text-5xl">
