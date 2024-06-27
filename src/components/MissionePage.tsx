@@ -113,6 +113,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
           </div>
         </div>
       </div>
+      <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
     </div>
   );
 };

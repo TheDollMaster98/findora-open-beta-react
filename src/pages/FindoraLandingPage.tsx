@@ -35,7 +35,9 @@ const FindoraLandingPage: FunctionComponent = () => {
     <div className="relative flex flex-col items-start justify-start w-full overflow-hidden bg-nero-1-findora">
       {/* LOGO */}
       <HomePage />
+      <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
       <ListaDattesa />
+      <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
       {/* NAVBAR */}
       <div
         className={`navbar w-full bg-nero-3-findora flex-row items-center justify-center text-center text-17xl text-white font-gotham ${
