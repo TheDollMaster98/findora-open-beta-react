@@ -1,10 +1,15 @@
 import { FunctionComponent } from "react";
 
-export type FORMVType = {
+export type FormType = {
   className?: string;
 };
 
-const FORMV: FunctionComponent<FORMVType> = ({ className = "" }) => {
+const Form: FunctionComponent<FormType> = ({ className = "" }) => {
+  const handleSubmit = () => {
+    // Funzione per gestire l'invio del form
+    console.log("Form submitted");
+  };
+
   return (
     <div
       className={`w-[840px] bg-white max-w-full overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className}`}
@@ -22,45 +27,47 @@ const FORMV: FunctionComponent<FORMVType> = ({ className = "" }) => {
           <div className="self-stretch flex flex-col items-start justify-start gap-[15px] z-[1] text-left text-xl text-gray">
             <div className="flex flex-row flex-wrap items-start self-stretch justify-start">
               <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-0 box-border min-w-[370px] max-h-[80px]">
-                <div className="w-full bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] max-w-[370px] border-[1px] border-solid border-bianco-1-findora">
-                  <b className="relative flex items-center self-stretch flex-1">
-                    Nome
-                  </b>
-                </div>
+                <input
+                  type="text"
+                  placeholder="Nome"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] max-w-[370px] border-[1px] border-solid border-bianco-1-findora"
+                />
               </div>
               <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-0 box-border min-w-[370px] max-h-[80px]">
-                <div className="w-full bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] max-w-[370px] border-[1px] border-solid border-bianco-1-findora">
-                  <b className="relative flex items-center self-stretch flex-1">
-                    Cognome
-                  </b>
-                </div>
+                <input
+                  type="text"
+                  placeholder="Cognome"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] max-w-[370px] border-[1px] border-solid border-bianco-1-findora"
+                />
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-5 px-10 box-border min-w-[370px] text-center text-base text-bianco-1-findora">
-              <div className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start">
-                <b className="relative flex items-center self-stretch justify-center flex-1">
-                  Seleziona un opzione +
-                </b>
-              </div>
+              <select className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start">
+                <option value="">Seleziona un'opzione</option>
+                <option value="opzione1">Opzione 1</option>
+                <option value="opzione2">Opzione 2</option>
+              </select>
             </div>
             <div className="flex flex-col items-start self-stretch justify-start">
               <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border min-w-[370px]">
-                <div className="self-stretch bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora">
-                  <b className="relative flex items-center self-stretch flex-1">
-                    Email
-                  </b>
-                </div>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="self-stretch bg-nero-3-findora box-border h-[60px] flex flex-row items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                />
               </div>
               <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border min-w-[370px]">
-                <div className="self-stretch bg-nero-3-findora box-border h-[180px] flex flex-row items-start justify-start p-[15px] border-[1px] border-solid border-bianco-1-findora">
-                  <b className="relative self-stretch flex-1">
-                    Condividi le tue aspettative, suggerimenti, feedback
-                  </b>
-                </div>
+                <textarea
+                  placeholder="Condividi le tue aspettative, suggerimenti, feedback"
+                  className="self-stretch bg-nero-3-findora box-border h-[180px] flex flex-row items-start justify-start p-[15px] border-[1px] border-solid border-bianco-1-findora"
+                />
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border min-w-[370px] text-center text-13xl text-white">
-              <div className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start py-0 px-[15px] box-border">
+              <div
+                className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start py-0 px-[15px] box-border cursor-pointer"
+                onClick={handleSubmit}
+              >
                 <b className="relative flex items-center self-stretch justify-center flex-1">
                   SUBMIT
                 </b>
@@ -80,4 +87,4 @@ const FORMV: FunctionComponent<FORMVType> = ({ className = "" }) => {
   );
 };
 
-export default FORMV;
+export default Form;

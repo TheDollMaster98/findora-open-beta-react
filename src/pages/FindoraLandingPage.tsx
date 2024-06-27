@@ -7,6 +7,7 @@ import MissionePage from "./MissionePage";
 import FAQPage from "./FAQPage";
 import Navbar from "../components/Navbar";
 import ListaDattesa from "../components/ListaDattesa";
+import Form from "../components/Form";
 
 const FindoraLandingPage: FunctionComponent = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -46,6 +47,7 @@ const FindoraLandingPage: FunctionComponent = () => {
       >
         <Navbar />
       </div>
+      <Form />
       {/* PRESENTAZIONE */}
       <PresentazionePage />
       {/* BENEFIT: */}
