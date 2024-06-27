@@ -9,9 +9,10 @@ const Page: FunctionComponent<PageType> = ({ className = "" }) => {
   return (
     <div
       className={`self-stretch flex flex-col items-start justify-start text-center text-[2.5rem] text-nero-3-findora font-gotham ${className}`}
+      data-scroll-to="faq"
     >
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
-      <div className="self-stretch flex flex-row items-start justify-start">
+      <div className="flex flex-row items-start self-stretch justify-start">
         <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[41.25rem] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora">
           <div className="relative font-medium z-[1]">04</div>
           <b className="flex-1 relative text-[4rem] text-bianco-1-findora text-left z-[0]">
@@ -51,18 +52,18 @@ const Page: FunctionComponent<PageType> = ({ className = "" }) => {
           />
           <div className="self-stretch flex flex-col items-start justify-start py-[1.875rem] pr-[3.75rem] pl-[1.875rem] text-left border-[4px] border-solid border-nero-3-findora">
             <div className="self-stretch flex flex-col items-start justify-start gap-[0.937rem]">
-              <div className="self-stretch flex flex-row items-start justify-start">
-                <div className="flex-1 relative font-medium">{`PER DOLL & MERC`}</div>
+              <div className="flex flex-row items-start self-stretch justify-start">
+                <div className="relative flex-1 font-medium">{`PER DOLL & MERC`}</div>
               </div>
               <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[3.75rem] pl-[1.875rem] text-[1.5rem] text-bianco-1-findora">
                 <div className="flex-1 flex flex-row items-start justify-start gap-[1.875rem]">
-                  <div className="self-stretch flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center self-stretch justify-center">
                     <div className="w-[4rem] relative box-border h-[0.25rem] border-t-[4px] border-solid border-verde-1-findora" />
                   </div>
-                  <b className="flex-1 relative">
+                  <b className="relative flex-1">
                     Quando sarà disponibile Findora sul mercato?
                   </b>
-                  <div className="self-stretch flex flex-row items-center justify-center">
+                  <div className="flex flex-row items-center self-stretch justify-center">
                     <div className="flex flex-row items-start justify-start">
                       <img
                         className="w-[1.875rem] relative h-[1.875rem]"

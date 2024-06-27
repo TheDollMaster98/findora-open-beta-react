@@ -29,7 +29,7 @@ const Page5: FunctionComponent<Page5Type> = ({ className = "" }) => {
               </div>
             </div>
           </div>
-          <div className="animate-bounce">
+          <div className="opacity-75 animate-bounce">
             <div className="self-stretch flex flex-row items-center justify-center p-[0.625rem] ">
               <b className="relative">
                 <p className="m-0">Scorri e scopri un mondo</p>

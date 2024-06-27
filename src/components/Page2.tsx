@@ -9,9 +9,10 @@ const Page2: FunctionComponent<Page2Type> = ({ className = "" }) => {
   return (
     <div
       className={`self-stretch flex flex-col items-start justify-start text-center text-[2.5rem] text-nero-3-findora font-gotham ${className}`}
+      data-scroll-to="come-funziona"
     >
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
-      <div className="self-stretch flex flex-row items-start justify-start">
+      <div className="flex flex-row items-start self-stretch justify-start">
         <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[41.25rem] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora">
           <div className="w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 z-[1]">
             02
@@ -59,7 +60,7 @@ const Page2: FunctionComponent<Page2Type> = ({ className = "" }) => {
                 Per UTENTI
               </b>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start self-stretch justify-start">
               <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
                 <FrameComponent1
                   creaITuoiServizi="Trova tutto ciò di cui hai bisogno"

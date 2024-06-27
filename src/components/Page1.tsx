@@ -9,6 +9,7 @@ const Page1: FunctionComponent<Page1Type> = ({ className = "" }) => {
   return (
     <div
       className={`self-stretch flex flex-col items-start justify-start text-left text-[2.5rem] text-nero-3-findora font-gotham ${className}`}
+      data-scroll-to="mission"
     >
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
       <div className="self-stretch h-[36.563rem] flex flex-row items-start justify-start">
@@ -29,7 +30,7 @@ const Page1: FunctionComponent<Page1Type> = ({ className = "" }) => {
           </div>
           <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[3.75rem] pl-[7.5rem] text-left text-white">
             <div className="w-[37.5rem] flex flex-row items-start justify-start min-w-[22.5rem] max-w-[37.5rem]">
-              <b className="flex-1 relative">
+              <b className="relative flex-1">
                 <p className="m-0">
                   “Sostenere la crescita e lo sviluppo di carriere e competenze,
                   ispirando la realizzazione dei sogni e la prosperità di
@@ -47,7 +48,6 @@ const Page1: FunctionComponent<Page1Type> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <ListaDattesa />
     </div>
   );
 };
