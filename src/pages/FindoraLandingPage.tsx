@@ -43,7 +43,6 @@ const FindoraLandingPage: FunctionComponent = () => {
         }`}
       >
         <Navbar />
-        {/* <div className="bg-verde-1-findora h-[1rem]"></div> */}
       </div>
 
       {/* PRESENTAZIONE */}

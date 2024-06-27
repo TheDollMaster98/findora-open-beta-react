@@ -38,7 +38,6 @@ const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
       ref={ref}
       className={`self-stretch flex flex-col items-start justify-start text-center text-[4rem] text-white font-gotham ${className}`}
     >
-      <div className="bg-verde-1-findora h-[1rem]"></div>
       <div className="self-stretch flex flex-col items-center justify-start pt-[1.875rem] px-[0rem] pb-[3.75rem] text-[2.5rem] text-nero-3-findora border-[4px] border-solid border-nero-3-findora">
         <div className="flex flex-col items-center justify-center">
           <div
