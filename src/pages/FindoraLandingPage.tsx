@@ -1,10 +1,10 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import Page5 from "../components/Page5";
-import Page4 from "../components/Page4";
-import Page3 from "../components/Page3";
-import Page2 from "../components/Page2";
-import Page1 from "../components/Page1";
-import Page from "../components/Page";
+import HomePage from "../components/HomePage";
+import PresentazionePage from "../components/PresentazionePage";
+import BenefitPage from "../components/BenefitPage";
+import ComeFunzionaPage from "../components/ComeFunzionaPage";
+import MissionePage from "../components/MissionePage";
+import FAQPage from "../components/FAQPage";
 import Navbar from "../components/Navbar";
 import ListaDattesa from "../components/ListaDattesa";
 
@@ -34,7 +34,7 @@ const FindoraLandingPage: FunctionComponent = () => {
   return (
     <div className="relative flex flex-col items-start justify-start w-full overflow-hidden bg-nero-1-findora">
       {/* LOGO */}
-      <Page5 />
+      <HomePage />
       <ListaDattesa />
       {/* NAVBAR */}
       <div
@@ -47,16 +47,16 @@ const FindoraLandingPage: FunctionComponent = () => {
       </div>
 
       {/* PRESENTAZIONE */}
-      <Page4 />
+      <PresentazionePage />
       {/* BENEFIT: */}
-      <Page3 />
+      <BenefitPage />
       {/* COME FUNZIONA */}
-      <Page2 />
+      <ComeFunzionaPage />
       {/* MISSION */}
-      <Page1 />
+      <MissionePage />
       <ListaDattesa />
       {/* F.A.Q. */}
-      <Page />
+      <FAQPage />
       <div className="self-stretch bg-nero-3-findora h-[22.5rem]" />
     </div>
   );

@@ -1,10 +1,12 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 
-export type Page1Type = {
+export type MissionePageType = {
   className?: string;
 };
 
-const Page1: FunctionComponent<Page1Type> = ({ className = "" }) => {
+const MissionePage: FunctionComponent<MissionePageType> = ({
+  className = "",
+}) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -115,4 +117,4 @@ const Page1: FunctionComponent<Page1Type> = ({ className = "" }) => {
   );
 };
 
-export default Page1;
+export default MissionePage;

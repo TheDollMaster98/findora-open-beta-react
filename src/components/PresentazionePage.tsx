@@ -1,10 +1,12 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 
-export type Page4Type = {
+export type PresentazionePageType = {
   className?: string;
 };
 
-const Page4: FunctionComponent<Page4Type> = ({ className = "" }) => {
+const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
+  className = "",
+}) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -66,4 +68,4 @@ const Page4: FunctionComponent<Page4Type> = ({ className = "" }) => {
   );
 };
 
-export default Page4;
+export default PresentazionePage;

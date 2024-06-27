@@ -2,11 +2,11 @@ import { FunctionComponent, useEffect, useRef, useState } from "react";
 import FrameComponent from "./FrameComponent";
 import { faqItems } from "../model/faqItem";
 
-export type PageType = {
+export type FAQPage = {
   className?: string;
 };
 
-const Page: FunctionComponent<PageType> = ({ className = "" }) => {
+const FAQPage: FunctionComponent<FAQPage> = ({ className = "" }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -81,4 +81,4 @@ const Page: FunctionComponent<PageType> = ({ className = "" }) => {
   );
 };
 
-export default Page;
+export default FAQPage;

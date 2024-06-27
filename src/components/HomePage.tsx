@@ -1,10 +1,10 @@
 import { FunctionComponent } from "react";
 
-export type Page5Type = {
+export type HomePageType = {
   className?: string;
 };
 
-const Page5: FunctionComponent<Page5Type> = ({ className = "" }) => {
+const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
   return (
     <div
       className={`w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham ${className}`}
@@ -57,4 +57,4 @@ const Page5: FunctionComponent<Page5Type> = ({ className = "" }) => {
   );
 };
 
-export default Page5;
+export default HomePage;

@@ -1,11 +1,13 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 import FrameComponent2 from "./FrameComponent2";
 
-export type Page3Type = {
+export type BenefitPageType = {
   className?: string;
 };
 
-const Page3: FunctionComponent<Page3Type> = ({ className = "" }) => {
+const BenefitPage: FunctionComponent<BenefitPageType> = ({
+  className = "",
+}) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -128,4 +130,4 @@ const Page3: FunctionComponent<Page3Type> = ({ className = "" }) => {
   );
 };
 
-export default Page3;
+export default BenefitPage;
