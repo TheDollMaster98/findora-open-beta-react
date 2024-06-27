@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import HowToWorkCard from "./HowToWorkCard";
+import HowToWorkCard from "../components/HowToWorkCard";
 
 export type ComeFunzionaPageType = {
   className?: string;

@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import BenefitCard from "./BenefitCard";
+import BenefitCard from "../components/BenefitCard";
 
 export type BenefitPageType = {
   className?: string;

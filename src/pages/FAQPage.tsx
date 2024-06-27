@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import FAQCard from "./FAQCard";
+import FAQCard from "../components/FAQCard";
 import { faqItems } from "../model/faqItem";
 
 export type FAQPage = {

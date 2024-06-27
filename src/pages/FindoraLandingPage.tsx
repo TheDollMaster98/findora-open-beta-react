@@ -1,10 +1,10 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import HomePage from "../components/HomePage";
-import PresentazionePage from "../components/PresentazionePage";
-import BenefitPage from "../components/BenefitPage";
-import ComeFunzionaPage from "../components/ComeFunzionaPage";
-import MissionePage from "../components/MissionePage";
-import FAQPage from "../components/FAQPage";
+import HomePage from "./HomePage";
+import PresentazionePage from "./PresentazionePage";
+import BenefitPage from "./BenefitPage";
+import ComeFunzionaPage from "./ComeFunzionaPage";
+import MissionePage from "./MissionePage";
+import FAQPage from "./FAQPage";
 import Navbar from "../components/Navbar";
 import ListaDattesa from "../components/ListaDattesa";
 
