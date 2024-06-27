@@ -1,6 +1,6 @@
 import { FunctionComponent, useState } from "react";
 
-export type FrameComponentType = {
+export type FAQCardType = {
   className?: string;
   prop?: string;
   cosFindora?: string;
@@ -10,7 +10,7 @@ export type FrameComponentType = {
   textClassName?: string;
 };
 
-const FrameComponent: FunctionComponent<FrameComponentType> = ({
+const FAQCard: FunctionComponent<FAQCardType> = ({
   className = "",
   prop,
   cosFindora,
@@ -67,4 +67,4 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
   );
 };
 
-export default FrameComponent;
+export default FAQCard;

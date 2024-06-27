@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import FrameComponent2 from "./FrameComponent2";
+import BenefitCard from "./BenefitCard";
 
 export type BenefitPageType = {
   className?: string;
@@ -109,7 +109,7 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
         </div>
         <div className="flex-1 flex flex-col items-start justify-start text-center text-[2rem]">
           {benefits.map((benefit, index) => (
-            <FrameComponent2
+            <BenefitCard
               key={index}
               prop={benefit.prop}
               ricercaImmediata={benefit.title}

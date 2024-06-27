@@ -1,6 +1,6 @@
 import { FunctionComponent, useMemo, CSSProperties } from "react";
 
-export type FrameComponent2Type = {
+export type BenefitCardType = {
   className?: string;
   prop?: string;
   ricercaImmediata?: string;
@@ -13,7 +13,7 @@ export type FrameComponent2Type = {
   textClassName?: string;
 };
 
-const FrameComponent2: FunctionComponent<FrameComponent2Type> = ({
+const BenefitCard: FunctionComponent<BenefitCardType> = ({
   className = "",
 
   prop,
@@ -70,4 +70,4 @@ const FrameComponent2: FunctionComponent<FrameComponent2Type> = ({
   );
 };
 
-export default FrameComponent2;
+export default BenefitCard;

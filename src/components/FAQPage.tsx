@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import FrameComponent from "./FrameComponent";
+import FAQCard from "./FAQCard";
 import { faqItems } from "../model/faqItem";
 
 export type FAQPage = {
@@ -63,7 +63,7 @@ const FAQPage: FunctionComponent<FAQPage> = ({ className = "" }) => {
         </div>
         <div className="flex-1 flex flex-col items-start justify-start text-[2rem]">
           {faqItems.map((item, index) => (
-            <FrameComponent
+            <FAQCard
               key={index}
               prop={item.prop}
               cosFindora={item.question}

@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
-import FrameComponent1 from "./FrameComponent1";
+import HowToWorkCard from "./HowToWorkCard";
 
 export type ComeFunzionaPageType = {
   className?: string;
@@ -156,7 +156,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
               <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
                 <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
                   {section.benefits.map((benefit, idx) => (
-                    <FrameComponent1
+                    <HowToWorkCard
                       key={idx}
                       creaITuoiServizi={benefit.creaITuoiServizi}
                       offriLeTueCompetenzeEdIni={
@@ -203,7 +203,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
               <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
                 <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
                   {section.benefits.map((benefit, idx) => (
-                    <FrameComponent1
+                    <HowToWorkCard
                       key={idx}
                       creaITuoiServizi={benefit.creaITuoiServizi}
                       offriLeTueCompetenzeEdIni={

@@ -1,6 +1,6 @@
 import { FunctionComponent, useMemo, CSSProperties } from "react";
 
-export type FrameComponent1Type = {
+export type HowToWorkCardType = {
   className?: string;
   creaITuoiServizi?: string;
   offriLeTueCompetenzeEdIni?: string;
@@ -10,7 +10,7 @@ export type FrameComponent1Type = {
   textClassName?: string;
 };
 
-const FrameComponent1: FunctionComponent<FrameComponent1Type> = ({
+const HowToWorkCard: FunctionComponent<HowToWorkCardType> = ({
   className = "",
   creaITuoiServizi,
   offriLeTueCompetenzeEdIni,
@@ -45,4 +45,4 @@ const FrameComponent1: FunctionComponent<FrameComponent1Type> = ({
   );
 };
 
-export default FrameComponent1;
+export default HowToWorkCard;
