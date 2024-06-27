@@ -37,7 +37,7 @@ const FindoraLandingPage: FunctionComponent = () => {
       <HomePage />
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
       <ListaDattesa />
-      <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
+      <div className="self-stretch bg-nero-3-findora h-[1.875rem]" />
       {/* NAVBAR */}
       <div
         className={`navbar w-full bg-nero-3-findora flex-row items-center justify-center text-center text-17xl text-white font-gotham ${
@@ -46,7 +46,6 @@ const FindoraLandingPage: FunctionComponent = () => {
       >
         <Navbar />
       </div>
-
       {/* PRESENTAZIONE */}
       <PresentazionePage />
       {/* BENEFIT: */}
