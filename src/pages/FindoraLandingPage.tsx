@@ -8,6 +8,7 @@ import FAQPage from "./FAQPage";
 import Navbar from "../components/Navbar";
 import ListaDattesa from "../components/ListaDattesa";
 import Form from "../components/Form";
+import Footer from "../components/Footer";
 
 const FindoraLandingPage: FunctionComponent = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -37,8 +38,11 @@ const FindoraLandingPage: FunctionComponent = () => {
       {/* LOGO */}
       <HomePage />
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+
       <ListaDattesa />
-      <div className="self-stretch bg-nero-3-findora h-[1.875rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+
       {/* NAVBAR */}
       <div
         className={`navbar w-full bg-nero-3-findora flex-row items-center justify-center text-center text-17xl text-white font-gotham ${
@@ -55,10 +59,13 @@ const FindoraLandingPage: FunctionComponent = () => {
       <ComeFunzionaPage />
       {/* MISSION */}
       <MissionePage />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
       <ListaDattesa />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
       {/* F.A.Q. */}
       <FAQPage />
-      <div className="self-stretch bg-nero-3-findora h-[22.5rem]" />
+      <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
+      <Footer />
     </div>
   );
 };
