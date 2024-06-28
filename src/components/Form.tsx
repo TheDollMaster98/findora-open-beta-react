@@ -102,7 +102,7 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
             <img
               className="w-[30px] relative h-[30px]"
               alt=""
-              src="/vector3.svg"
+              src="/public/X - Black.svg"
             />
           </div>
         </div>
