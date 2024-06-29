@@ -85,8 +85,10 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
       className={`self-stretch flex flex-col items-start justify-start text-left text-[2.5rem] text-nero-3-findora font-gotham ${className}`}
       data-scroll-to="benefit"
     >
+      
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
-      <div className="flex flex-row items-start self-stretch justify-start">
+      {/* container di title e benefits */}
+      <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
         <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[41.25rem] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora">
           <div
             className={`relative font-medium z-[1] animate-fade-right animate-once animate-duration-500 animate-delay-0 animate-ease-out ${

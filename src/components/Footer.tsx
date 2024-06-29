@@ -37,7 +37,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
         <div className="flex flex-col items-center self-stretch justify-center">
           <b className="relative">SOCIAL</b>
         </div>
-        <div className="self-stretch flex flex-col items-start justify-start gap-[15px]">
+        <div className="self-stretch flex flex-row justify-center gap-[30px]">
           {socialLinks.map((link, index) => (
             <div
               key={index}
@@ -45,7 +45,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             >
               <a href={link.href} target="_blank" rel="noopener noreferrer">
                 <img
-                  className="w-[45px] relative h-[45px] overflow-hidden shrink-0"
+                  className="w-[35px] relative h-[45px] overflow-hidden shrink-0 hover:w-[3rem] duration-200"
                   alt={link.alt}
                   src={link.src}
                 />
