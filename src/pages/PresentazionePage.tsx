@@ -40,27 +40,35 @@ const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
     >
       <div className="self-stretch flex flex-col items-center justify-start pt-[1.875rem] px-[0rem] pb-[3.75rem] text-[2.5rem] text-nero-3-findora border-[4px] border-solid border-nero-3-findora">
         <div className="flex flex-col items-center justify-center">
+          {/* Container numero e titolo */}
           <div
-            className={`self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[1.875rem] gap-[0.937rem] lg:flex-row lg:gap-[0.938rem] lg:items-start lg:justify-start md:flex-row md:gap-[0.938rem] md:items-start md:justify-center sm:flex-row sm:gap-[0.938rem] sm:items-start sm:justify-center ${
+            className={`self-stretch flex flex-row items-start justify-start pt-[0rem] px-[30px] pb-[1.875rem] gap-[0.937rem] lg:flex-row lg:gap-[0.938rem] lg:items-start lg:justify-start md:flex-row md:gap-[0.938rem] md:items-start md:justify-center sm:flex-row sm:gap-[0.938rem] sm:items-start sm:justify-center ${
               inView
                 ? "animate-fade-down animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
             }`}
           >
             <div className="flex flex-col items-start justify-start">
-              <div className="relative font-medium">00</div>
+              <div className="relative font-medium sm:hidden">00</div>
             </div>
             <div className="flex-1 flex flex-row items-center justify-center text-left text-[4rem] text-bianco-1-findora">
-              <b className="relative flex-1">La nostra presentazione</b>
+              <b className="relative flex-1 sm:text-[2.5rem] text-center">
+                La nostra presentazione
+              </b>
             </div>
           </div>
-          <div
-            className={`w-[67.5rem] relative bg-gainsboro h-[37.5rem] ${
-              inView
-                ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
-                : ""
-            }`}
-          />
+          <div className="w-[960px] h-[540px] md:w-[640px] md:h-[360px] sm:w-[320px] sm:h-[180px]">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/s-2PUw2OakU?si=H1yNvlhgU5MniATq&amp;start=25"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
