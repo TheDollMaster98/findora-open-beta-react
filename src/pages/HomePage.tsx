@@ -31,7 +31,7 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
       <div className="pb-8 opacity-75 animate-bounce">
         <div className="flex flex-row items-center justify-center p-[0.625rem]">
           <b className="relative">
-            <p className="m-0">Scorri e scopri un mondoo</p>
+            <p className="m-0">Scorri e scopri un mondo</p>
             <p className="m-0">di infinite opportunità</p>
           </b>
         </div>
