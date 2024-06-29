@@ -46,36 +46,24 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
       title: "Acquistare su Findora",
       description:
         "Ottieni un servizio su misura per le tue esigenze specifiche in base al tuo progetto.",
-      propPadding: "0rem 15rem 0rem 7.5rem",
-      propWidth: "unset",
-      propFlex: "1",
     },
     {
       prop: "01.3",
       title: "Vendere su Findora",
       description:
         "Creare il tuo servizio è un'opportunità per mostrare il tuo talento e fornire ai clienti tutte le informazioni di cui hanno bisogno per aiutarli a decidere di lavorare con te.",
-      propPadding: "0rem 15rem 0rem 7.5rem",
-      propWidth: "unset",
-      propFlex: "1",
     },
     {
       prop: "01.4",
       title: "Fiducia e sicurezza",
       description:
         "Feedback e sistema di Ranking sono essenziali per il marketplace di Findora. Con le valutazioni, i livelli e il feedback del venditore, abbiamo semplificato l'esame, il confronto e l'acquisto dei servizi di cui hai bisogno.",
-      propPadding: "0rem 15rem 0rem 7.5rem",
-      propWidth: "unset",
-      propFlex: "1",
     },
     {
       prop: "01.5",
       title: "Prendi Ispirazione",
       description:
         "Dai un'occhiata agli splendidi lavori fatti dalla community per trasformare in realtà la tua prossima grande idea.",
-      propPadding: "0rem 15rem 0rem 7.5rem",
-      propWidth: "unset",
-      propFlex: "1",
     },
   ];
 
@@ -85,47 +73,53 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
       className={`self-stretch flex flex-col items-start justify-start text-left text-[2.5rem] text-nero-3-findora font-gotham ${className}`}
       data-scroll-to="benefit"
     >
-      
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
       {/* container di title e benefits */}
       <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[41.25rem] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora">
+        {/* container del title "BENEFITS" */}
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full">
+          {/* Numero nel titolo */}
           <div
             className={`relative font-medium z-[1] animate-fade-right animate-once animate-duration-500 animate-delay-0 animate-ease-out ${
               inView
                 ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
-            }`}
+            } sm:hidden`}
           >
             01
           </div>
+          {/* Titolo */}
           <b
             className={`flex-1 relative text-[4rem] text-bianco-1-findora z-[0]} ${
               inView
                 ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
-            }`}
+            } sm:text-[3rem] text-center`}
           >
             BENEFIT
           </b>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start text-center text-[2rem]">
-          {benefits.map((benefit, index) => (
-            <BenefitCard
-              key={index}
-              prop={benefit.prop}
-              ricercaImmediata={benefit.title}
-              piUtilizziIlNostroIlProce={benefit.description}
-              propPadding={benefit.propPadding}
-              propWidth={benefit.propWidth}
-              propFlex={benefit.propFlex}
-              textClassName={
-                inView
-                  ? "animate-fade-left animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
-                  : ""
-              }
-            />
-          ))}
+
+        {/* Container spacer e cards per md screen */}
+        <div className="w-full flex flex-row">
+          {/* Spacer */}
+          <div className="hidden md:block w-[120px] md:bg-nero-3-findora sm:hidden"></div>
+          {/* Cards */}
+          <div className="flex-1 flex flex-col items-start justify-start text-center text-[2rem]">
+            {benefits.map((benefit, index) => (
+              <BenefitCard
+                key={index}
+                prop={benefit.prop}
+                ricercaImmediata={benefit.title}
+                piUtilizziIlNostroIlProce={benefit.description}
+                textClassName={
+                  inView
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                    : ""
+                }
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

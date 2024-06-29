@@ -39,31 +39,31 @@ const BenefitCard: FunctionComponent<BenefitCardType> = ({
 
   return (
     <div
-      className={`self-stretch flex flex-col items-start justify-start py-[1.875rem] pr-[3.75rem] pl-[1.875rem] gap-[1.875rem] text-center text-[2rem] text-nero-3-findora font-gotham border-[4px] border-solid border-nero-3-findora ${className}`}
+      className={`self-stretch flex flex-col items-start justify-start py-[1.875rem] pr-[3.75rem] pl-[1.875rem] gap-[1.875rem] text-center text-[2rem] text-nero-3-findora font-gotham border-[4px] border-solid border-nero-3-findora ${className} md:pr-[1.85rem]`}
     >
+      {/* container di tutta la card */}
       <div className="self-stretch flex flex-row items-start justify-start gap-[0.937rem]">
+        {/* Numerino */}
         <div
-          className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 ${textClassName}`}
+          className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 ${textClassName} md:hidden`}
         >
           {prop}
         </div>
+        {/* Titolo */}
         <b
           className={`flex-1 relative text-[2.25rem] text-bianco-1-findora text-left ${textClassName}`}
         >
           {ricercaImmediata}
         </b>
       </div>
+      {/* Contenuto */}
       <div
-        className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[3.75rem] pl-[7.5rem] text-left text-[1.25rem] text-white"
+        className="self-stretch flex flex-row items-start justify-start py-[0rem]  pl-[7.5rem] text-left text-[1.25rem] text-white md:pl-[1.875rem]"
         style={frameDivStyle}
       >
-        <div
-          className="w-[52.5rem] flex flex-row items-start justify-start min-w-[22.5rem] max-w-[52.5rem]"
-          style={frameDiv1Style}
-        >
-          <div className={`relative flex-1 ${textClassName}`}>
-            {piUtilizziIlNostroIlProce}
-          </div>
+        {/* Descizione */}
+        <div className={` relative flex-1 ${textClassName} max-w-[52.5rem]`}>
+          {piUtilizziIlNostroIlProce}
         </div>
       </div>
     </div>
