@@ -94,7 +94,7 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
               inView
                 ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
-            } sm:text-[3rem] text-center`}
+            } sm:text-[3rem] sm:text-center`}
           >
             BENEFIT
           </b>
