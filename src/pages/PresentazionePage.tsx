@@ -57,7 +57,7 @@ const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
               </b>
             </div>
           </div>
-          <div className="w-[960px] h-[540px] md:w-[640px] md:h-[360px] sm:w-[320px] sm:h-[180px]">
+          <div className=" w-[960px] h-[540px] md:w-[90%] md:h-[480px]  sm:w-[99%] sm:h-[240px]">
             <iframe
               width="100%"
               height="100%"
