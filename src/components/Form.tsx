@@ -2,25 +2,34 @@ import { FunctionComponent, useState } from "react";
 
 export type FormType = {
   className?: string;
+  onClose: () => void;
 };
 
-const Form: FunctionComponent<FormType> = ({ className = "" }) => {
+const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
   const handleSubmit = () => {
     // Funzione per gestire l'invio del form
     console.log("Form submitted");
+    onClose();
   };
 
   const [isOptionOpen, setIsOptionOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   const toggleOption = () => {
     setIsOptionOpen(!isOptionOpen);
+  };
+
+  const selectOption = (option: string) => {
+    console.log(`Selected option: ${option}`);
+    setSelectedOption(option);
+    setIsOptionOpen(false);
   };
 
   return (
     <div
       className={`w-[840px] bg-white max-w-full overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className}`}
     >
-      <div className="w-[840px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-0 max-w-[840px] border-[4px] border-solid border-nero-3-findora">
+      <div className="w-[840px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-0 max-w-[840px] border-[4px] border-solid border-nero-3-findora relative">
         <div className="self-stretch flex flex-col items-start justify-start py-[5px] px-0 relative gap-[35px]">
           <div className="self-stretch flex flex-row items-start justify-start z-[0]">
             <div className="flex-1 flex flex-col items-start justify-start py-[15px] px-0 gap-[30px]">
@@ -48,27 +57,28 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-5 px-10 box-border min-w-[370px] text-center text-base text-bianco-1-findora">
-              {/* <select className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start">
-                <option value="">Seleziona un'opzione</option>
-                <option value="opzione1">Opzione 1</option>
-                <option value="opzione2">Opzione 2</option>
-              </select> */}
-              <div className="self-stretch bg-verde-1-findora h-[60px] flex flex-row items-start justify-start py-0 px-[15px] box-border cursor-pointer">
-                <b
-                  className="relative flex items-center self-stretch justify-center flex-1"
-                  onClick={toggleOption}
-                >
-                  SELEZIONA UNA OPZIONE
+              <div
+                className="self-stretch bg-verde-1-findora h-[60px] flex flex-col items-center justify-center py-0 px-[15px] box-border cursor-pointer relative"
+                onClick={toggleOption}
+              >
+                <b className="relative flex items-center justify-center flex-1">
+                  {selectedOption ? selectedOption : "SELEZIONA UNA OPZIONE +"}
                 </b>
                 {isOptionOpen && (
-                  <b className="relative flex items-center self-stretch justify-center flex-1">
-                    FREELENCER
-                  </b>
-                )}
-                {isOptionOpen && (
-                  <b className="relative flex items-center self-stretch justify-center flex-1">
-                    UTENTE
-                  </b>
+                  <div className="absolute top-[100%] left-0 right-0 bg-nero-3-findora z-10 border-solid border-bianco-1-findora">
+                    <div
+                      className="h-[60px] flex items-center justify-center cursor-pointer border-t border-nero-3-findora"
+                      onClick={() => selectOption("FREELENCER")}
+                    >
+                      FREELENCER
+                    </div>
+                    <div
+                      className="h-[60px] flex items-center justify-center cursor-pointer border-t border-nero-3-findora"
+                      onClick={() => selectOption("UTENTE")}
+                    >
+                      UTENTE
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
@@ -98,7 +108,10 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
               </div>
             </div>
           </div>
-          <div className="!m-[0] absolute top-[0px] left-[750px] flex flex-row items-start justify-start py-0 px-[30px] z-[2]">
+          <div
+            className="!m-[0] absolute top-[0px] right-[0px] flex flex-row items-start justify-start py-0 px-[30px] z-[2] cursor-pointer"
+            onClick={onClose}
+          >
             <img
               className="w-[30px] relative h-[30px]"
               alt=""

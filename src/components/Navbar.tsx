@@ -19,6 +19,10 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
     setShowForm(!showForm);
   };
 
+  const closeForm = () => {
+    setShowForm(false);
+  };
+
   return (
     <div
       className={`flex flex-row items-center justify-start text-center text-17xl text-white font-gotham ${className}`}
@@ -58,13 +62,16 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
           onClick={toggleForm}
         >
           <b className="relative">LISTA D’ATTESA</b>
-          {showForm && (
-            <div className="absolute left-0 w-full mt-2 top-full">
-              <Form className="max-w-[840px] mx-auto" />
-            </div>
-          )}
         </div>
       </div>
+      {showForm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-black opacity-75"></div>
+          <div className="relative z-50">
+            <Form className="max-w-[840px] mx-auto" onClose={closeForm} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
