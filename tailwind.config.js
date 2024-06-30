@@ -38,13 +38,13 @@ module.exports = {
     },
     screens: {
       lg: {
-        max: "1200px",
+        max: "1920px",
       },
       md: {
-        max: "1080px",
+        max: "1200px",
       },
       sm: {
-        max: "420px",
+        max: "500px",
       },
     },
   },

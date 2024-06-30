@@ -94,24 +94,28 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
       data-scroll-to="come-funziona"
     >
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
-      <div className="flex flex-row items-start self-stretch justify-start">
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[41.25rem] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora">
+      {/* container di title e contenuto */}
+      <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
+        {/* container del title "come funziona" */}
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center">
+          {/* Numero nel titolo */}
           <div
             className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 z-[1] ${
               inView
                 ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
-            }`}
+            } sm:hidden`}
           >
             02
           </div>
+          {/* Titolo */}
           <b className="relative text-[4rem] text-bianco-1-findora text-left z-[0]">
             <p
               className={`m-0 ${
                 inView
                   ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                   : ""
-              }`}
+              } sm:text-[3rem] sm:text-center`}
             >
               COME
             </p>
@@ -120,7 +124,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                 inView
                   ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                   : ""
-              }`}
+              } sm:text-[3rem] sm:text-center`}
             >
               FUNZIONA
             </p>
