@@ -42,7 +42,7 @@ const HowToWorkCard: FunctionComponent<HowToWorkCardType> = ({
       />
       {/* titolo */}
       <b
-        className={`self-stretch relative flex items-center justify-center h-[3.375rem] shrink-0 ${textClassName}`}
+        className={`self-stretch relative flex items-center justify-center min-h-[3.375rem] max-h-full shrink-0 ${textClassName} `}
       >
         {creaITuoiServizi}
       </b>
