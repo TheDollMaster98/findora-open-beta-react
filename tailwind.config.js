@@ -43,9 +43,15 @@ module.exports = {
       md: {
         max: "1200px",
       },
+      ml: {
+        max: "768px",
+      },
       sm: {
         max: "500px",
       },
+      ss: {
+        max: "400px",
+      }
     },
   },
   corePlugins: {
