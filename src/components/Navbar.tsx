@@ -27,7 +27,10 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
     <div
       className={`flex flex-row items-center justify-start text-center text-17xl text-white font-gotham ${className}`}
     >
-      <div className="self-stretch flex flex-row items-center justify-center py-0 px-[60px]">
+      <div
+        className="self-stretch flex flex-row items-center justify-center py-0 px-[60px] cursor-pointer"
+        onClick={() => scrollToSection("presentazione")}
+      >
         <b className="relative">Findora</b>
       </div>
       <div className="flex-1 h-[60px] overflow-hidden flex flex-row items-center justify-end gap-[10px] text-xl">
