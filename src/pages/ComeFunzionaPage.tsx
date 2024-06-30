@@ -43,18 +43,24 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
           creaITuoiServizi: "Crea i tuoi Servizi",
           offriLeTueCompetenzeEdIni:
             "Offri le tue competenze ed inizia a guadagnare subito.",
+          src: "/comeFunzionaIcons/plus.svg",
+          alt: "Crea i tuoi servizi",
         },
         {
           creaITuoiServizi: "Costruisci la tua reputazione",
           offriLeTueCompetenzeEdIni:
             "Vendi servizi, accumula punti e scala le classifiche.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/stella.svg",
+          alt: "Costruisci la tua reputazione",
         },
         {
           creaITuoiServizi: "Impara dai migliori",
           offriLeTueCompetenzeEdIni:
             "Partecipa a workshop esclusivi e ricevi mentoring dai top freelancer del settore.",
           propAlignSelf: "unset",
+          src: "/comeFunzionaIcons/userPlus.svg",
+          alt: "Impara dai migliori",
         },
       ],
     },
@@ -70,18 +76,24 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
           offriLeTueCompetenzeEdIni:
             "Entra e ricerca velocemente il servizio più adatto a te tramite L’intelligenza Artificiale.",
           propAlignSelf: "unset",
+          src: "/comeFunzionaIcons/lente.svg",
+          alt: "Trova tutto ciò di cui hai bisogno",
         },
         {
           creaITuoiServizi: "Esplora le nostre categorie",
           offriLeTueCompetenzeEdIni:
             "Esplora una vasta gamma di servizi offerti da professionisti qualificati.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/categorie.svg",
+          alt: "Esplora le nostre categorie",
         },
         {
           creaITuoiServizi: "Compra in sicurezza",
           offriLeTueCompetenzeEdIni:
             "Affidati a recensioni verificate e pagamenti protetti.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/lucchetto.svg",
+          alt: "Compra in sicurezza",
         },
       ],
     },
@@ -130,7 +142,8 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
             </p>
           </b>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start text-[2rem]">
+        {/* PADRE */}
+        <div className="flex-1 flex flex-col items-start justify-start text-[2rem] ">
           {/* PER FREELENCER */}
           {freelancerBenefits.map((section, index) => (
             <div
@@ -143,7 +156,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:hidden`}
                 >
                   {section.prop}
                 </div>
@@ -152,13 +165,13 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:text-center`}
                 >
                   {section.title}
                 </b>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
-                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
+                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[3.75rem] md:px-[0rem] md:gap-[1.875rem] md:px-[1.875rem] sm:flex-col sm:px-[0rem]">
                   {section.benefits.map((benefit, idx) => (
                     <HowToWorkCard
                       key={idx}
@@ -172,12 +185,20 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                           ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                           : ""
                       }
+                      srcClassName={
+                        inView
+                          ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                          : ""
+                      }
+                      src={benefit.src}
+                      alt={benefit.alt}
                     />
                   ))}
                 </div>
               </div>
             </div>
           ))}
+
           {/* PER UTENTI */}
           {userBenefits.map((section, index) => (
             <div
@@ -190,7 +211,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:hidden`}
                 >
                   {section.prop}
                 </div>
@@ -199,13 +220,13 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:text-center`}
                 >
                   {section.title}
                 </b>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
-                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
+                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[3.75rem] md:px-[0rem] md:gap-[1.875rem] md:px-[1.875rem] sm:flex-col sm:px-[0rem]">
                   {section.benefits.map((benefit, idx) => (
                     <HowToWorkCard
                       key={idx}
@@ -219,6 +240,13 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                           ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                           : ""
                       }
+                      srcClassName={
+                        inView
+                          ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                          : ""
+                      }
+                      src={benefit.src}
+                      alt={benefit.alt}
                     />
                   ))}
                 </div>
