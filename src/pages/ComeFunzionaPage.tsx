@@ -43,18 +43,24 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
           creaITuoiServizi: "Crea i tuoi Servizi",
           offriLeTueCompetenzeEdIni:
             "Offri le tue competenze ed inizia a guadagnare subito.",
+          src: "/comeFunzionaIcons/plus.svg",
+          alt: "Crea i tuoi servizi",
         },
         {
           creaITuoiServizi: "Costruisci la tua reputazione",
           offriLeTueCompetenzeEdIni:
             "Vendi servizi, accumula punti e scala le classifiche.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/stella.svg",
+          alt: "Costruisci la tua reputazione",
         },
         {
           creaITuoiServizi: "Impara dai migliori",
           offriLeTueCompetenzeEdIni:
             "Partecipa a workshop esclusivi e ricevi mentoring dai top freelancer del settore.",
           propAlignSelf: "unset",
+          src: "/comeFunzionaIcons/userPlus.svg",
+          alt: "Impara dai migliori",
         },
       ],
     },
@@ -70,18 +76,24 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
           offriLeTueCompetenzeEdIni:
             "Entra e ricerca velocemente il servizio più adatto a te tramite L’intelligenza Artificiale.",
           propAlignSelf: "unset",
+          src: "/comeFunzionaIcons/lente.svg",
+          alt: "Trova tutto ciò di cui hai bisogno",
         },
         {
           creaITuoiServizi: "Esplora le nostre categorie",
           offriLeTueCompetenzeEdIni:
             "Esplora una vasta gamma di servizi offerti da professionisti qualificati.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/categorie.svg",
+          alt: "Esplora le nostre categorie",
         },
         {
           creaITuoiServizi: "Compra in sicurezza",
           offriLeTueCompetenzeEdIni:
             "Affidati a recensioni verificate e pagamenti protetti.",
           propAlignSelf: "stretch",
+          src: "/comeFunzionaIcons/lucchetto.svg",
+          alt: "Compra in sicurezza",
         },
       ],
     },
@@ -97,10 +109,10 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
       {/* container di title e contenuto */}
       <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
         {/* container del title "come funziona" */}
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center">
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[33.3%] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center">
           {/* Numero nel titolo */}
           <div
-            className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 z-[1] ${
+            className={`relative font-medium flex items-center justify-center shrink-0 z-[1] ${
               inView
                 ? "animate-fade-right animate-once animate-duration-1000 animate-delay-0 animate-ease-out"
                 : ""
@@ -109,7 +121,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
             02
           </div>
           {/* Titolo */}
-          <b className="relative text-[4rem] text-bianco-1-findora text-left z-[0]">
+          <b className=" flex-1 relative text-[4rem] text-bianco-1-findora text-left z-[0]">
             <p
               className={`m-0 ${
                 inView
@@ -130,7 +142,8 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
             </p>
           </b>
         </div>
-        <div className="flex-1 flex flex-col items-start justify-start text-[2rem]">
+        {/* PADRE */}
+        <div className=" self-stretch flex-1 flex flex-col items-start justify-start text-[2rem] ">
           {/* PER FREELENCER */}
           {freelancerBenefits.map((section, index) => (
             <div
@@ -143,7 +156,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:hidden`}
                 >
                   {section.prop}
                 </div>
@@ -152,32 +165,38 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:text-center`}
                 >
                   {section.title}
                 </b>
               </div>
-              <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
-                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
-                  {section.benefits.map((benefit, idx) => (
-                    <HowToWorkCard
-                      key={idx}
-                      creaITuoiServizi={benefit.creaITuoiServizi}
-                      offriLeTueCompetenzeEdIni={
-                        benefit.offriLeTueCompetenzeEdIni
-                      }
-                      propAlignSelf={benefit.propAlignSelf}
-                      textClassName={
-                        inView
-                          ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
-                          : ""
-                      }
-                    />
-                  ))}
-                </div>
+              <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[3.75rem] md:px-[0rem] md:gap-[1.875rem] sm:flex-col">
+                {section.benefits.map((benefit, idx) => (
+                  <HowToWorkCard
+                    key={idx}
+                    creaITuoiServizi={benefit.creaITuoiServizi}
+                    offriLeTueCompetenzeEdIni={
+                      benefit.offriLeTueCompetenzeEdIni
+                    }
+                    propAlignSelf={benefit.propAlignSelf}
+                    textClassName={
+                      inView
+                        ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                        : ""
+                    }
+                    srcClassName={
+                      inView
+                        ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                        : ""
+                    }
+                    src={benefit.src}
+                    alt={benefit.alt}
+                  />
+                ))}
               </div>
             </div>
           ))}
+
           {/* PER UTENTI */}
           {userBenefits.map((section, index) => (
             <div
@@ -190,7 +209,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:hidden`}
                 >
                   {section.prop}
                 </div>
@@ -199,29 +218,35 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                     inView
                       ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
                       : ""
-                  }`}
+                  } md:text-center`}
                 >
                   {section.title}
                 </b>
               </div>
-              <div className="self-stretch flex flex-col items-start justify-start text-[1.5rem] text-bianco-1-findora">
-                <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[1.875rem]">
-                  {section.benefits.map((benefit, idx) => (
-                    <HowToWorkCard
-                      key={idx}
-                      creaITuoiServizi={benefit.creaITuoiServizi}
-                      offriLeTueCompetenzeEdIni={
-                        benefit.offriLeTueCompetenzeEdIni
-                      }
-                      propAlignSelf={benefit.propAlignSelf}
-                      textClassName={
-                        inView
-                          ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
-                          : ""
-                      }
-                    />
-                  ))}
-                </div>
+
+              <div className="self-stretch flex flex-row items-start justify-start py-[0rem] px-[3.75rem] gap-[3.75rem] md:px-[0rem] md:gap-[1.875rem] sm:flex-col ">
+                {section.benefits.map((benefit, idx) => (
+                  <HowToWorkCard
+                    key={idx}
+                    creaITuoiServizi={benefit.creaITuoiServizi}
+                    offriLeTueCompetenzeEdIni={
+                      benefit.offriLeTueCompetenzeEdIni
+                    }
+                    propAlignSelf={benefit.propAlignSelf}
+                    textClassName={
+                      inView
+                        ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                        : ""
+                    }
+                    srcClassName={
+                      inView
+                        ? "animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-out"
+                        : ""
+                    }
+                    src={benefit.src}
+                    alt={benefit.alt}
+                  />
+                ))}
               </div>
             </div>
           ))}
