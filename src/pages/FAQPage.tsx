@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 import FAQCard from "../components/FAQCard";
-import { faqItems } from "../model/faqItem";
+import { faqItems } from "../model/faqItem.model";
 
 export type FAQPage = {
   className?: string;
@@ -66,7 +66,7 @@ const FAQPage: FunctionComponent<FAQPage> = ({ className = "" }) => {
           </b>
         </div>
         {/* Container spacer e cards per md screen */}
-        <div className="w-full flex flex-row">
+        <div className="flex flex-row w-full">
           <div className="hidden md:block w-[120px] md:bg-nero-3-findora sm:hidden"></div>
           {/* Cards */}
           <div className="flex-1 flex flex-col items-start justify-start text-[2rem]">

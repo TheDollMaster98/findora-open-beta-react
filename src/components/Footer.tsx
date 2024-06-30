@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { socialLinks } from "../model/social";
+import { socialLinks } from "../model/social.model";
 
 export type FooterType = {
   className?: string;
