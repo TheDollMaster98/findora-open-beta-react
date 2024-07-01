@@ -6,6 +6,8 @@ export type FooterType = {
 };
 
 const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div
       className={`bg-nero-1-findora box-border max-w-full h-[480px] flex flex-row items-start justify-center p-[60px] gap-[60px] text-left text-5xl text-white font-gotham border-[4px] border-solid border-nero-3-findora self-stretch ${className}`}
@@ -31,6 +33,9 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
           <div className="w-60 relative bg-gainsboro h-[60px]">
             {"  TASTO IUBENTA"}
           </div>
+        </div>
+        <div className="flex items-center justify-center text-center">
+          <p>Copyright &copy; {currentYear} Findora All Rights Reserved.</p>
         </div>
       </div>
       <div className="w-[360px] flex flex-col items-center justify-start gap-[30px] max-w-[360px]">
