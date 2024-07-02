@@ -43,7 +43,7 @@ const FAQPage: FunctionComponent<FAQPage> = ({ className = "" }) => {
       {/* container di title e faq */}
       <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
         {/* container del title "FAQ" */}
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full">
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:pl-[0rem]">
           {/* Numero nel titolo */}
           <div
             className={`relative font-medium z-[1] ${

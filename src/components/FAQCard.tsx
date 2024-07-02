@@ -44,7 +44,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
         <div className="self-stretch flex flex-col items-start justify-start py-[0rem] pr-[3.75rem] pl-[1.875rem] gap-[0.937rem] text-left text-[1.5rem] text-bianco-1-findora md:px-[0rem] ">
           <div className="self-stretch flex flex-row items-start justify-start gap-[1.875rem]">
             {/* Stanghetta */}
-            <div className="flex flex-col items-center self-stretch justify-center sm:hidden">
+            <div className="flex flex-col items-center self-stretch justify-center ml:hidden sm:hidden">
               <div className="w-[4rem] relative box-border h-[0.25rem] border-t-[4px] border-solid border-verde-1-findora" />
             </div>
             <b className="relative flex-1">{cosFindora}</b>
@@ -60,7 +60,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
           </div>
           {isOpen && (
             //testo risposta
-            <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[3.75rem] pl-[7.5rem] text-[1.25rem] transition-max-height duration-500 ease-in-out sm:pl-[1.875rem]">
+            <div className="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[3.75rem] pl-[7.5rem] text-[1.25rem] transition-max-height duration-500 ease-in-out ml:pl-[1.875rem] sm:p-[0rem]">
               <div className="relative flex-1">{findoraUnaMarketplaceCheM}</div>
             </div>
           )}

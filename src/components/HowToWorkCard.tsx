@@ -48,7 +48,7 @@ const HowToWorkCard: FunctionComponent<HowToWorkCardType> = ({
       </b>
       {/* description */}
       <div
-        className={`w-full relative text-[1.25rem] text-white text-left inline-block max-w-[28.125rem] ${textClassName}`}
+        className={`w-full relative text-[1.25rem] text-white text-left inline-block max-w-[28.125rem] ${textClassName} sm:text-center`}
       >
         {offriLeTueCompetenzeEdIni}
       </div>
