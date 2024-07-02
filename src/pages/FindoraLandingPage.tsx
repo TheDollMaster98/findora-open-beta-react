@@ -38,10 +38,10 @@ const FindoraLandingPage: FunctionComponent = () => {
       {/* LOGO */}
       <HomePage />
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />
-      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem] border-[4px] border-solid border-nero-3-findora" />
 
       <ListaDattesa />
-      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem] border-[4px] border-solid border-nero-3-findora" />
 
       {/* NAVBAR */}
       <div
@@ -59,9 +59,9 @@ const FindoraLandingPage: FunctionComponent = () => {
       <ComeFunzionaPage />
       {/* MISSION */}
       <MissionePage />
-      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem] border-[4px] border-solid border-nero-3-findora" />
       <ListaDattesa />
-      <div className="self-stretch bg--nero-1-findora h-[1.875rem]" />
+      <div className="self-stretch bg--nero-1-findora h-[1.875rem] border-[4px] border-solid border-nero-3-findora" />
       {/* F.A.Q. */}
       <FAQPage />
       <div className="self-stretch bg-nero-3-findora h-[3.75rem]" />

@@ -43,7 +43,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
       {/* container di title e mission */}
       <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
         {/* container del title "MISSSION" */}
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center">
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[41.25rem] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center sm:pl-[0rem]">
           {/* Numero nel titolo */}
           <div
             className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 z-[1] ${
@@ -111,7 +111,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
                   }`}
                 >
                   {/* citazione 1 */}
-                  <p className="m-0 sm:text-[1.75rem]">
+                  <p className="m-0 ml:text-[1.75rem]">
                     “Sostenere la crescita e lo sviluppo di carriere e
                     competenze, ispirando la realizzazione dei sogni e la
                     prosperità di creativi in tutto il mondo, attraverso
@@ -119,7 +119,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
                   </p>
                   <p className="m-0">&nbsp;</p>
                   {/* citazione 2 */}
-                  <p className="m-0 sm:text-[1.75rem]">
+                  <p className="m-0 ml:text-[1.75rem]">
                     Il tutto rivoluzionando il sistema della competizione,
                     premiazione e visibilità Basato un sistema di ranking
                     innovativo, con un’approccio easy-to-use”

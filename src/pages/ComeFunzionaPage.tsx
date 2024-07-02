@@ -46,7 +46,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
       {/* container di title e contenuto */}
       <div className="flex flex-row items-start self-stretch justify-start md:flex-col">
         {/* container del title "come funziona" */}
-        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[33.3%] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:justify-center">
+        <div className="self-stretch flex-1 box-border overflow-hidden flex flex-row items-start justify-start py-[1.875rem] pr-[0rem] pl-[1.875rem] gap-[0.937rem] min-w-[33.3%] max-w-[33.3%] border-[4px] border-solid border-nero-3-findora md:min-w-full sm:text-center sm:pl-[0rem]">
           {/* Numero nel titolo */}
           <div
             className={`relative font-medium flex items-center justify-center shrink-0 z-[1] ${
