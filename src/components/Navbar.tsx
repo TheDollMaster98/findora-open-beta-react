@@ -1,5 +1,6 @@
 import { FunctionComponent, useCallback, useState } from "react";
 import Form from "./Form"; // Assicurati che il percorso del componente Form sia corretto
+import { IoMenuSharp } from "react-icons/io5";
 
 export type NavbarType = {
   className?: string;
@@ -23,9 +24,15 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
     setShowForm(false);
   };
 
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   return (
     <div
-      className={`flex flex-row items-center justify-start text-center text-17xl text-white font-gotham ${className}`}
+      className={`flex flex-row items-center justify-start text-center text-17xl text-white font-gotham ${className} md:justify-between`}
     >
       <div
         className="self-stretch flex flex-row items-center justify-center py-0 px-[60px] cursor-pointer"
@@ -33,7 +40,9 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
       >
         <b className="relative">Findora</b>
       </div>
-      <div className="flex-1 h-[60px] overflow-hidden flex flex-row items-center justify-end gap-[10px] text-xl">
+      {/* TASTI DELLA NAVBAR */}
+
+      <div className="flex-1 h-[60px] overflow-hidden flex flex-row items-center justify-end gap-[10px] text-xl md:hidden">
         <div className="self-stretch flex flex-row items-center justify-center gap-[10px]">
           <div
             className="self-stretch flex flex-row items-center justify-center p-2.5 cursor-pointer"
@@ -66,6 +75,9 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
         >
           <b className="relative">LISTA D’ATTESA</b>
         </div>
+      </div>
+      <div onClick={handleNav} className="pr-[2rem] py-[12px] lg:hidden">
+        {!nav ? <IoMenuSharp size={30} /> : <IoMenuSharp size={30} />}
       </div>
       {showForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">

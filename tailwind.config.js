@@ -38,6 +38,7 @@ module.exports = {
     },
     screens: {
       lg: {
+        min:"1201px",
         max: "1920px",
       },
       md: {
