@@ -10,3 +10,5 @@ export default defineConfig({
   },
   plugins: [react()],
 });
+
+//"predeploy": "cross-env NODE_ENV=production npm run build",
