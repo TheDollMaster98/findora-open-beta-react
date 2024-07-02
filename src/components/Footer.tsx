@@ -46,6 +46,10 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             </div>
           ))}
         </div>
+        {/* QUI */}
+        {/* <div className="flex items-center justify-center text-center">
+          <p>Copyright &copy; {currentYear} Findora All Rights Reserved.</p>
+        </div> */}
       </div>
       <div className="w-[360px] flex flex-col items-center justify-start gap-[30px] max-w-[360px]">
         <div className="flex flex-col items-center self-stretch justify-center">
