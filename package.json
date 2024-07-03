@@ -1,7 +1,7 @@
 {
   "homepage": "https://TheDollMaster98.github.io/findora-open-beta-react/",
   "name": "findora_-_react_tailwind",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
