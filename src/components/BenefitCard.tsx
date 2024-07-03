@@ -47,7 +47,7 @@ const BenefitCard: FunctionComponent<BenefitCardType> = ({
         <div
           className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0 ${textClassName} md:hidden`}
         >
-          {prop}
+          <p className="m-0">{prop}</p>
         </div>
         {/* Titolo */}
         <b

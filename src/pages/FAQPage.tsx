@@ -52,7 +52,7 @@ const FAQPage: FunctionComponent<FAQPage> = ({ className = "" }) => {
                 : ""
             } sm:hidden`}
           >
-            04
+            <p className="m-0">04</p>
           </div>
           {/* Titolo */}
           <b

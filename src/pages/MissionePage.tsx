@@ -52,7 +52,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
                 : ""
             } sm:hidden`}
           >
-            03
+            <p className="m-0">03</p>
           </div>
           {/* Titolo */}
           <b className="relative text-[4rem] text-bianco-1-findora text-left z-[0]">
@@ -82,7 +82,7 @@ const MissionePage: FunctionComponent<MissionePageType> = ({
                     : ""
                 } md:hidden`}
               >
-                03.1
+                <p className="m-0">03.1</p>
               </div>
               {/* titolo interno */}
               <b

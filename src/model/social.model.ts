@@ -10,7 +10,7 @@ export const socialLinks = [
     alt: "TikTok",
   },
   {
-    href: "https://www.youtube.com/channel/UC7yoTJfK7cXb1ZjrmOaG7Hg",
+    href: "https://youtube.com/@officialfindora?si=6IwbKzvBVbSZqaCg",
     src: "/socialLinks/youtube--logo-svg-1.svg",
     alt: "YouTube",
   },
@@ -18,5 +18,10 @@ export const socialLinks = [
     href: "https://www.linkedin.com/company/findorait/",
     src: "/socialLinks/linkedin--logo-black-1.svg",
     alt: "LinkedIn",
+  },
+  {
+    href: "https://www.twitch.tv/findorait",
+    src: "/socialLinks/twitch--logo-svg-1.svg",
+    alt: "Twitch",
   },
 ];

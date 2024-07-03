@@ -37,6 +37,9 @@ module.exports = {
       inherit: "inherit",
     },
     screens: {
+      sl: {
+        min: "1920px",
+      },
       lg: {
         min: "1201px",
         max: "1920px",
