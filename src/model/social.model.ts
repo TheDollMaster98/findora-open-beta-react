@@ -10,7 +10,7 @@ export const socialLinks = [
     alt: "TikTok",
   },
   {
-    href: "https://www.youtube.com/channel/UC7yoTJfK7cXb1ZjrmOaG7Hg",
+    href: "https://youtube.com/@officialfindora?si=6IwbKzvBVbSZqaCg",
     src: "/socialLinks/youtube--logo-svg-1.svg",
     alt: "YouTube",
   },
