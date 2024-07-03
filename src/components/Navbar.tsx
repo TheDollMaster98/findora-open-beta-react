@@ -100,7 +100,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             : "border-[4px] border-solid border-nero-3-findora list-none fixed right-[-100%] pl-0 lg:hidden sm:hidden  "
         }
       >
-        <div className="flex flex-col h-full justify-between">
+        <div className="flex flex-col justify-between h-full">
           <div>
             <div className="flex justify-end items-center h-[50px] border-b-[4px] border-solid border-nero-3-findora sm:bg-nero-3-findora sm:h-[60px] sm:justify-between">
               <b
@@ -180,7 +180,10 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
 
           <div>
             <div className="h-[30px] border-y-[4px] border-solid border-nero-3-findora" />
-            <div className="flex justify-center items-center  h-[120px] bg-verde-1-findora ">
+            <div
+              className="flex justify-center items-center  h-[120px] bg-verde-1-findora "
+              onClick={toggleForm}
+            >
               <p className="font-bold text-[48px] ml:text-[36px] sm:text-[2rem]">
                 LISTA D'ATTESA
               </p>
@@ -191,7 +194,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
       </div>
 
       {nav && (
-        <div className="fixed inset-0 bg-black opacity-75 z-40 lg:hidden sm:hidden"></div>
+        <div className="fixed inset-0 z-40 bg-black opacity-75 lg:hidden sm:hidden"></div>
       )}
 
       {showForm && (
