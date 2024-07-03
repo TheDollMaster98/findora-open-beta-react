@@ -55,7 +55,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                 : ""
             } sm:hidden`}
           >
-            02
+            <p className="m-0">02</p>
           </div>
           {/* Titolo */}
           <b className=" flex-1 relative text-[4rem] text-bianco-1-findora text-left z-[0]">
@@ -95,7 +95,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                       : ""
                   } md:hidden`}
                 >
-                  {section.prop}
+                  <p className="m-0">{section.prop}</p>
                 </div>
                 <b
                   className={`flex-1 relative text-[2.25rem] text-bianco-1-findora text-left ${
@@ -148,7 +148,7 @@ const ComeFunzionaPage: FunctionComponent<ComeFunzionaPageType> = ({
                       : ""
                   } md:hidden`}
                 >
-                  {section.prop}
+                  <p className="m-0">{section.prop}</p>
                 </div>
                 <b
                   className={`flex-1 relative text-[2.25rem] text-bianco-1-findora text-left ${

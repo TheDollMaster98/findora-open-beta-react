@@ -86,7 +86,7 @@ const BenefitPage: FunctionComponent<BenefitPageType> = ({
                 : ""
             } sm:hidden`}
           >
-            01
+            <p className="m-0">01</p>
           </div>
           {/* Titolo */}
           <b

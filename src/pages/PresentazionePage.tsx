@@ -50,7 +50,9 @@ const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
             }`}
           >
             <div className="flex flex-col items-start justify-start">
-              <div className="relative font-medium sm:hidden">00</div>
+              <div className="relative font-medium sm:hidden">
+                <p className="m-0">00</p>
+              </div>
             </div>
             <div className="flex-1 flex flex-row items-center justify-center text-left text-[4rem] text-bianco-1-findora">
               <b className="relative flex-1 sm:text-[2.5rem] text-center">

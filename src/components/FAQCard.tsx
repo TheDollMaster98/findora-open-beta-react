@@ -37,7 +37,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
           <div
             className={`w-[4.688rem] relative font-medium flex items-center justify-center shrink-0`}
           >
-            {prop}
+            <p className="m-0"> {prop}</p>
           </div>
         </div>
         {/* container domanda + risposta */}
