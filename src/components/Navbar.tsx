@@ -8,6 +8,7 @@ export type NavbarType = {
 
 const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
   const [showForm, setShowForm] = useState(false);
+  const [nav, setNav] = useState(false);
 
   const scrollToSection = useCallback((section: string) => {
     const anchor = document.querySelector(`[data-scroll-to='${section}']`);
@@ -24,47 +25,50 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
     setShowForm(false);
   };
 
-  const [nav, setNav] = useState(false);
-
   const handleNav = () => {
     setNav(!nav);
   };
 
+  const toggleNavAndScroll = (section: string) => {
+    handleNav(); // Chiudi il menu di navigazione
+    scrollToSection(section); // Scorrimento alla sezione specificata
+  };
+
   return (
     <div
-      className={`flex flex-row items-center justify-start text-center text-17xl text-white font-gotham ${className} md:justify-between`}
+      className={`flex flex-row items-center justify-start z-50 text-center text-17xl text-white font-gotham ${className} md:justify-between md:h-[60px] `}
     >
       <div
-        className="self-stretch flex flex-row items-center justify-center py-0 px-[60px] cursor-pointer"
+        className="self-stretch flex flex-row items-center justify-center py-0 px-[60px] cursor-pointer sm:pl-[30px]"
         onClick={() => scrollToSection("presentazione")}
       >
-        <b className="relative">Findora</b>
+        <b className="relative sm:text-[24px]">Findora</b>
       </div>
-      {/* TASTI DELLA NAVBAR */}
 
+      {/* TASTI DELLA NAVBAR */}
       <div className="flex-1 h-[60px] overflow-hidden flex flex-row items-center justify-end gap-[10px] text-xl md:hidden">
         <div className="self-stretch flex flex-row items-center justify-center gap-[10px]">
           <div
             className="self-stretch flex flex-row items-center justify-center p-2.5 cursor-pointer"
-            onClick={() => scrollToSection("benefit")}
+            onClick={() => toggleNavAndScroll("benefit")}
           >
             <div className="relative font-medium">Benefit</div>
           </div>
           <div
             className="self-stretch flex flex-row items-center justify-center p-2.5 cursor-pointer"
-            onClick={() => scrollToSection("come-funziona")}
+            onClick={() => toggleNavAndScroll("come-funziona")}
           >
             <div className="relative font-medium">Come funziona</div>
           </div>
           <div
             className="flex flex-row items-center justify-center p-2.5 cursor-pointer"
-            onClick={() => scrollToSection("mission")}
+            onClick={() => toggleNavAndScroll("mission")}
           >
             <div className="relative font-medium">Mission</div>
           </div>
           <div
             className="self-stretch flex flex-col items-center justify-center p-2.5 cursor-pointer"
-            onClick={() => scrollToSection("faq")}
+            onClick={() => toggleNavAndScroll("faq")}
           >
             <div className="relative font-medium">F.A.Q.</div>
           </div>
@@ -76,9 +80,115 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
           <b className="relative">LISTA D’ATTESA</b>
         </div>
       </div>
-      <div onClick={handleNav} className="pr-[2rem] py-[12px] lg:hidden">
-        {!nav ? <IoMenuSharp size={30} /> : <IoMenuSharp size={30} />}
+
+      <div onClick={handleNav} className="pr-[2rem] lg:hidden">
+        {!nav ? (
+          <IoMenuSharp size={40} />
+        ) : (
+          <img
+            className="w-[30px] relative h-[30px]"
+            alt="close"
+            src="/public/xbianco.svg"
+          />
+        )}
       </div>
+
+      <div
+        className={
+          nav
+            ? "fixed right-0 top-0 w-[50%] h-[100vh] mt-0 border-[4px] border-solid border-nero-3-findora bg-nero-1-findora list-none pl-0 z-50 ease-in-out duration-500 lg:hidden sm:w-full sm:border-none"
+            : "border-[4px] border-solid border-nero-3-findora list-none fixed right-[-100%] pl-0 lg:hidden sm:hidden  "
+        }
+      >
+        <div className="flex flex-col h-full justify-between">
+          <div>
+            <div className="flex justify-end items-center h-[50px] border-b-[4px] border-solid border-nero-3-findora sm:bg-nero-3-findora sm:h-[60px] sm:justify-between">
+              <b className="text-[24px] px-[30px] phone:hidden">Findora</b>
+              <img
+                className="w-[30px] relative h-[30px] pr-[2rem]"
+                alt="close"
+                src="/xbianco.svg"
+                onClick={handleNav}
+              />
+            </div>
+            <div
+              onClick={() => toggleNavAndScroll("benefit")}
+              className="self-stretch text-left pl-[45px] pr-[30px]"
+            >
+              <div className="flex flex-row justify-between items-center py-[15px]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                  BENEFIT
+                </p>
+                <img
+                  className="h-[30px] w-[30px] object-contain"
+                  alt=""
+                  src="/triangolo.svg"
+                />
+              </div>
+            </div>
+            <div
+              onClick={() => toggleNavAndScroll("come-funziona")}
+              className="self-stretch text-left pl-[45px] pr-[30px]"
+            >
+              <div className="flex flex-row justify-between items-center py-[15px]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                  COME FUNZIONA
+                </p>
+                <img
+                  className="h-[30px] w-[30px] object-contain"
+                  alt=""
+                  src="/triangolo.svg"
+                />
+              </div>
+            </div>
+            <div
+              onClick={() => toggleNavAndScroll("mission")}
+              className="self-stretch text-left pl-[45px] pr-[30px]"
+            >
+              <div className="flex flex-row justify-between items-center py-[15px]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                  MISSION
+                </p>
+                <img
+                  className="h-[30px] w-[30px] object-contain"
+                  alt=""
+                  src="/triangolo.svg"
+                />
+              </div>
+            </div>
+            <div
+              onClick={() => toggleNavAndScroll("faq")}
+              className="self-stretch text-left pl-[45px] pr-[30px]"
+            >
+              <div className="flex flex-row justify-between items-center py-[15px]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                  F.A.Q.
+                </p>
+                <img
+                  className="h-[30px] w-[30px] object-contain"
+                  alt=""
+                  src="/triangolo.svg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="h-[30px] border-y-[4px] border-solid border-nero-3-findora" />
+            <div className="flex justify-center items-center  h-[120px] bg-verde-1-findora ">
+              <p className="font-bold text-[48px] ml:text-[36px]">
+                LISTA D'ATTESA
+              </p>
+            </div>
+            <div className="h-[30px] border-y-[4px] border-solid border-nero-3-findora" />
+          </div>
+        </div>
+      </div>
+
+      {nav && (
+        <div className="fixed inset-0 bg-black opacity-75 z-40 lg:hidden sm:hidden"></div>
+      )}
+
       {showForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="fixed inset-0 bg-black opacity-75"></div>

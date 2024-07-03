@@ -38,13 +38,14 @@ module.exports = {
     },
     screens: {
       lg: {
-        min:"1201px",
+        min: "1201px",
         max: "1920px",
       },
       md: {
         max: "1200px",
       },
       ml: {
+        min: "500px",
         max: "768px",
       },
       sm: {
@@ -52,7 +53,10 @@ module.exports = {
       },
       ss: {
         max: "400px",
-      }
+      },
+      phone: {
+        min: "500px",
+      },
     },
   },
   corePlugins: {
