@@ -81,7 +81,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
         </div>
       </div>
 
-      <div onClick={handleNav} className="pr-[2rem] lg:hidden">
+      <div onClick={handleNav} className="pr-[2rem] lg:hidden sl:hidden">
         {!nav ? (
           <IoMenuSharp size={40} />
         ) : (
@@ -103,7 +103,12 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
         <div className="flex flex-col h-full justify-between">
           <div>
             <div className="flex justify-end items-center h-[50px] border-b-[4px] border-solid border-nero-3-findora sm:bg-nero-3-findora sm:h-[60px] sm:justify-between">
-              <b className="text-[24px] px-[30px] phone:hidden">Findora</b>
+              <b
+                onClick={() => toggleNavAndScroll("presentazione")}
+                className="text-[24px] px-[30px] phone:hidden"
+              >
+                Findora
+              </b>
               <img
                 className="w-[30px] relative h-[30px] pr-[2rem]"
                 alt="close"
@@ -113,14 +118,14 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             </div>
             <div
               onClick={() => toggleNavAndScroll("benefit")}
-              className="self-stretch text-left pl-[45px] pr-[30px]"
+              className="self-stretch text-left pl-[45px] pr-[30px] sm:pl-[30px]"
             >
               <div className="flex flex-row justify-between items-center py-[15px]">
-                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem] sm:text-[2rem]">
                   BENEFIT
                 </p>
                 <img
-                  className="h-[30px] w-[30px] object-contain"
+                  className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
                   src="/triangolo.svg"
                 />
@@ -128,14 +133,14 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             </div>
             <div
               onClick={() => toggleNavAndScroll("come-funziona")}
-              className="self-stretch text-left pl-[45px] pr-[30px]"
+              className="self-stretch text-left pl-[45px] pr-[30px] sm:pl-[30px]"
             >
               <div className="flex flex-row justify-between items-center py-[15px]">
-                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem] sm:text-[2rem]">
                   COME FUNZIONA
                 </p>
                 <img
-                  className="h-[30px] w-[30px] object-contain"
+                  className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
                   src="/triangolo.svg"
                 />
@@ -143,14 +148,14 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             </div>
             <div
               onClick={() => toggleNavAndScroll("mission")}
-              className="self-stretch text-left pl-[45px] pr-[30px]"
+              className="self-stretch text-left pl-[45px] pr-[30px] sm:pl-[30px]"
             >
               <div className="flex flex-row justify-between items-center py-[15px]">
-                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem] sm:text-[2rem]">
                   MISSION
                 </p>
                 <img
-                  className="h-[30px] w-[30px] object-contain"
+                  className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
                   src="/triangolo.svg"
                 />
@@ -158,14 +163,14 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
             </div>
             <div
               onClick={() => toggleNavAndScroll("faq")}
-              className="self-stretch text-left pl-[45px] pr-[30px]"
+              className="self-stretch text-left pl-[45px] pr-[30px] sm:pl-[30px]"
             >
               <div className="flex flex-row justify-between items-center py-[15px]">
-                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem]">
+                <p className="font-bold font-gotham text-[3rem] m-0 ml:text-[2.25rem] sm:text-[2rem]">
                   F.A.Q.
                 </p>
                 <img
-                  className="h-[30px] w-[30px] object-contain"
+                  className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
                   src="/triangolo.svg"
                 />
@@ -176,7 +181,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
           <div>
             <div className="h-[30px] border-y-[4px] border-solid border-nero-3-findora" />
             <div className="flex justify-center items-center  h-[120px] bg-verde-1-findora ">
-              <p className="font-bold text-[48px] ml:text-[36px]">
+              <p className="font-bold text-[48px] ml:text-[36px] sm:text-[2rem]">
                 LISTA D'ATTESA
               </p>
             </div>

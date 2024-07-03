@@ -19,4 +19,9 @@ export const socialLinks = [
     src: "/socialLinks/linkedin--logo-black-1.svg",
     alt: "LinkedIn",
   },
+  {
+    href: "https://www.twitch.tv/findorait",
+    src: "/socialLinks/twitch--logo-svg-1.svg",
+    alt: "Twitch",
+  },
 ];
