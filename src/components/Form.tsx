@@ -191,7 +191,14 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 type="submit"
                 className="self-stretch bg-verde-1-findora h-[60px] flex items-start justify-start py-0 px-[15px] box-border cursor-pointer"
               >
-                <b className="relative flex items-center self-stretch justify-center flex-1 bianco-1-findora">
+                <b
+                  className="relative flex items-center self-stretch justify-center flex-1"
+                  style={{
+                    color: "white",
+                    fontWeight: "700",
+                    fontStyle: "normal",
+                  }}
+                >
                   SUBMIT
                 </b>
               </button>
