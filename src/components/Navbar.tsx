@@ -201,7 +201,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="fixed inset-0 bg-black opacity-75"></div>
           <div className="relative z-50">
-            <Form className="max-w-[840px] mx-auto" onClose={closeForm} />
+            <Form onClose={closeForm} />
           </div>
         </div>
       )}

@@ -76,7 +76,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
               </div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[15px] z-[1] text-left text-xl text-gray">
-              <div className="flex flex-row flex-wrap items-start self-stretch justify-start">
+              <div className="flex flex-col flex-wrap items-start self-stretch justify-start sm:flex-row">
                 <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full sm:w-[370px]">
                   <input
                     type="text"
@@ -84,7 +84,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Nome"
-                    className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[30px] border-[1px] border-solid border-bianco-1-findora"
+                    className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                     required
                   />
                 </div>
@@ -95,7 +95,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                     value={formData.surname}
                     onChange={handleChange}
                     placeholder="Cognome"
-                    className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[30px] border-[1px] border-solid border-bianco-1-findora"
+                    className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                     required
                   />
                 </div>
@@ -162,6 +162,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 </button>
               </div>
             </div>
+            {/* da togliere: */}
             {result && (
               <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] text-center text-13xl text-white">
                 <p className="relative flex items-center self-stretch justify-center flex-1">
