@@ -218,7 +218,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
             <img
               className="w-[30px] relative h-[30px]"
               alt="close"
-              src="./public/xverde.svg"
+              src="./public/xbianco.svg"
             />
           </div>
         </div>
