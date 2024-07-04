@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 
 export type FormType = {
   className?: string;
@@ -16,6 +16,13 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    document.body.classList.add("modal-open");
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, []);
 
   const toggleOption = () => {
     setIsOptionOpen(!isOptionOpen);

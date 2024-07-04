@@ -30,3 +30,7 @@ body {
 ::after {
   border-width: 0;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
