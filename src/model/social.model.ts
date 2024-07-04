@@ -1,6 +1,6 @@
 export const socialLinks = [
   {
-    href: "https://www.instagram.com/findora.it",
+    href: "https://www.instagram.com/officialfindora",
     src: "./socialLinks/instagram--logo-black-1.svg",
     alt: "Instagram",
   },

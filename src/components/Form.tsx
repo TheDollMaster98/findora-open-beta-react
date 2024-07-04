@@ -84,18 +84,18 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Nome"
-                  className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                   required
                 />
               </div>
-              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] sm:px-[0rem] sm:w-full">
+              <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full sm:w-[370px]">
                 <input
                   type="text"
                   name="surname"
                   value={formData.surname}
                   onChange={handleChange}
                   placeholder="Cognome"
-                  className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                   required
                 />
               </div>
@@ -126,28 +126,30 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 )}
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] sm:px-[0rem] sm:w-full">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
-                required
-              />
+            <div className="flex flex-col items-start self-stretch justify-start">
+              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px]">
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email"
+                  className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  required
+                />
+              </div>
+              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px]">
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Condividi le tue aspettative, suggerimenti, feedback"
+                  className="self-stretch bg-nero-3-findora box-border h-[180px] flex items-start justify-start p-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  required
+                />
+              </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] sm:px-[0rem] sm:w-full">
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Condividi le tue aspettative, suggerimenti, feedback"
-                className="self-stretch bg-nero-3-findora box-border h-[180px] flex items-start justify-start p-[15px] border-[1px] border-solid border-bianco-1-findora"
-                required
-              />
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] text-center text-13xl text-white sm:px-[0rem] sm:w-full">
+            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] text-center text-13xl text-white">
               <button
                 type="submit"
                 className="self-stretch bg-verde-1-findora h-[60px] flex items-start justify-start py-0 px-[15px] box-border cursor-pointer"
@@ -166,7 +168,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
             </div>
           )}
           <div
-            className="!m-[0] absolute top-[0px] right-[0px] flex flex-row items-start justify-start py-0 px-[30px] z-[2] cursor-pointer"
+            className="!m-[0] absolute top-[5px] right-[0px] flex flex-row items-start justify-start py-0 px-[30px] z-[2] cursor-pointer"
             onClick={onClose}
           >
             <img
