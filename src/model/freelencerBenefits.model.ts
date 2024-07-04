@@ -7,7 +7,7 @@ export const freelancerBenefits = [
         creaITuoiServizi: "Crea i tuoi Servizi",
         offriLeTueCompetenzeEdIni:
           "Offri le tue competenze ed inizia a guadagnare subito.",
-        src: "/comeFunzionaIcons/plus.svg",
+        src: "./comeFunzionaIcons/plus.svg",
         alt: "Crea i tuoi servizi",
       },
       {
@@ -15,7 +15,7 @@ export const freelancerBenefits = [
         offriLeTueCompetenzeEdIni:
           "Vendi servizi, accumula punti e scala le classifiche.",
         propAlignSelf: "stretch",
-        src: "/comeFunzionaIcons/stella.svg",
+        src: "./comeFunzionaIcons/stella.svg",
         alt: "Costruisci la tua reputazione",
       },
       {
@@ -23,7 +23,7 @@ export const freelancerBenefits = [
         offriLeTueCompetenzeEdIni:
           "Partecipa a workshop esclusivi e ricevi mentoring dai top freelancer del settore.",
         propAlignSelf: "unset",
-        src: "/comeFunzionaIcons/userPlus.svg",
+        src: "./comeFunzionaIcons/userPlus.svg",
         alt: "Impara dai migliori",
       },
     ],
