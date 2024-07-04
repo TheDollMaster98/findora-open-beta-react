@@ -16,14 +16,14 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
             <img
               className="w-[11.25rem] h-[11.25rem] md:h-[8.75rem] sm:w-[5rem] ss:w-[3rem]"
               alt=""
-              src="/vector.svg"
+              src="./vector.svg"
             />
           </div>
           <div className="flex flex-col items-center justify-center">
             <img
               className="w-[42.188rem] h-[9.375rem] md:w-[37.5rem] ml:w-[32.5rem] sm:w-[18.75rem] ss:w-[16rem] "
               alt=""
-              src="/group-136.svg"
+              src="./group-136.svg"
             />
           </div>
         </div>
@@ -39,17 +39,17 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
           <img
             className="w-[0.938rem] h-[0.938rem] object-contain"
             alt=""
-            src="/polygon-5.svg"
+            src="./polygon-5.svg"
           />
           <img
             className="w-[0.938rem] h-[0.938rem] object-contain"
             alt=""
-            src="/polygon-5.svg"
+            src="./polygon-5.svg"
           />
           <img
             className="w-[0.938rem] h-[0.938rem] object-contain"
             alt=""
-            src="/polygon-5.svg"
+            src="./polygon-5.svg"
           />
         </div>
       </div>

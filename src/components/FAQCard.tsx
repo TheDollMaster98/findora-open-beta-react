@@ -53,7 +53,7 @@ const FAQCard: FunctionComponent<FAQCardType> = ({
                 <img
                   className="w-[1.875rem] relative"
                   alt=""
-                  src={isOpen ? "/vector1.svg" : "/vector2.svg"}
+                  src={isOpen ? "./vector1.svg" : "./vector2.svg"}
                 />
               </div>
             </div>

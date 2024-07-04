@@ -88,7 +88,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
           <img
             className="w-[30px] relative h-[30px]"
             alt="close"
-            src="/public/xbianco.svg"
+            src="./public/xbianco.svg"
           />
         )}
       </div>
@@ -112,7 +112,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
               <img
                 className="w-[30px] relative h-[30px] pr-[2rem]"
                 alt="close"
-                src="/xbianco.svg"
+                src="./xbianco.svg"
                 onClick={handleNav}
               />
             </div>
@@ -127,7 +127,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
                 <img
                   className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
-                  src="/triangolo.svg"
+                  src="./triangolo.svg"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
                 <img
                   className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
-                  src="/triangolo.svg"
+                  src="./triangolo.svg"
                 />
               </div>
             </div>
@@ -157,7 +157,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
                 <img
                   className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
-                  src="/triangolo.svg"
+                  src="./triangolo.svg"
                 />
               </div>
             </div>
@@ -172,7 +172,7 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
                 <img
                   className="h-[30px] w-[30px] object-contain sm:h-[20px]"
                   alt=""
-                  src="/triangolo.svg"
+                  src="./triangolo.svg"
                 />
               </div>
             </div>
