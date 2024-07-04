@@ -10,5 +10,5 @@ To preview and run the project on your device:
 
 - Deploy tutorial:
 
-1. prima "npm run predeploy" perché setta le var di prod.
-2. poi "npm run deploy" perché deploya.
+1. prima `npm run predeploy` perché setta le var di prod.
+2. poi `npm run deploy` perché deploya.
