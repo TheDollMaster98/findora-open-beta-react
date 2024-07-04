@@ -75,26 +75,26 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
             </div>
           </div>
           <div className="self-stretch flex flex-col items-start justify-start gap-[15px] z-[1] text-left text-xl text-gray">
-            <div className="flex flex-col flex-wrap items-start self-stretch justify-start sm:flex-row">
-              <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full sm:w-[370px]">
+            <div className="flex flex-row flex-wrap items-start self-stretch justify-start md:flex-col">
+              <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full md:w-[54.313rem]">
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Nome"
-                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[30px] border-[1px] border-solid border-bianco-1-findora"
                   required
                 />
               </div>
-              <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full sm:w-[370px]">
+              <div className="flex-1 flex flex-col items-center justify-start py-2.5 px-[30px] max-h-[80px] w-full md:w-[54.313rem]">
                 <input
                   type="text"
                   name="surname"
                   value={formData.surname}
                   onChange={handleChange}
                   placeholder="Cognome"
-                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
+                  className="w-full bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[30px] border-[1px] border-solid border-bianco-1-findora"
                   required
                 />
               </div>
@@ -126,7 +126,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
               </div>
             </div>
             <div className="flex flex-col items-start self-stretch justify-start">
-              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px]">
+              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full">
                 <input
                   type="email"
                   name="email"
@@ -137,7 +137,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                   required
                 />
               </div>
-              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px]">
+              <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full">
                 <textarea
                   name="message"
                   value={formData.message}
@@ -148,7 +148,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 />
               </div>
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] text-center text-13xl text-white">
+            <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full text-center text-13xl text-white">
               <button
                 type="submit"
                 className="self-stretch bg-verde-1-findora h-[60px] flex items-start justify-start py-0 px-[15px] box-border cursor-pointer"
@@ -168,7 +168,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
             </div>
           )}
           <div
-            className="!m-[0] absolute top-[0px] right-[0px] flex flex-row items-start justify-start py-0 px-[30px] z-[2] cursor-pointer"
+            className="!m-[0] absolute top-[5px] right-[0px] flex flex-row items-start justify-start py-0 px-[30px] z-[2] cursor-pointer"
             onClick={onClose}
           >
             <img
