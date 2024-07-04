@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import FindoraLandingPage from "./pages/FindoraLandingPage";
 
+const baseUrl =
+  process.env.NODE_ENV === "production" ? "/findora-open-beta-react" : "";
+
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -24,8 +27,12 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Findora Open Beta Local";
+        metaDescription = "Findora Open Beta Local Description";
+        break;
+      case "/findora-open-beta-react/":
+        title = "Findora Open Beta";
+        metaDescription = "Findora Open Beta Description";
         break;
     }
 
@@ -45,8 +52,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<FindoraLandingPage />} />
+      <Route path={`${baseUrl}/`} element={<FindoraLandingPage />} />
     </Routes>
   );
 }
+
 export default App;
