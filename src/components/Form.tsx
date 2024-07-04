@@ -93,6 +93,14 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                   placeholder="Nome"
                   className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                   required
+                  style={{
+                    color: "rgba(255, 255, 255, 0.50)",
+                    fontFamily: "Gotham",
+                    fontSize: "20px",
+                    fontStyle: "normal",
+                    fontWeight: "700",
+                    lineHeight: "normal",
+                  }}
                 />
               </div>
               <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] sm:px-[0rem] sm:w-full">
@@ -104,6 +112,14 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                   placeholder="Cognome"
                   className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                   required
+                  style={{
+                    color: "rgba(255, 255, 255, 0.50)",
+                    fontFamily: "Gotham",
+                    fontSize: "20px",
+                    fontStyle: "normal",
+                    fontWeight: "700",
+                    lineHeight: "normal",
+                  }}
                 />
               </div>
             </div>
@@ -117,18 +133,18 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 </b>
                 {isOptionOpen && (
                   <div className="absolute top-[100%] left-0 right-0 bg-nero-3-findora z-10 border-solid border-bianco-1-findora">
-                    <div
+                    <b
                       className="h-[60px] flex items-center justify-center cursor-pointer border-t border-bianco-1-findora"
                       onClick={() => selectOption("FREELENCER")}
                     >
                       FREELENCER
-                    </div>
-                    <div
+                    </b>
+                    <b
                       className="h-[60px] flex items-center justify-center cursor-pointer border-t border-bianco-1-findora"
                       onClick={() => selectOption("UTENTE")}
                     >
                       UTENTE
-                    </div>
+                    </b>
                   </div>
                 )}
               </div>
@@ -142,6 +158,14 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 placeholder="Email"
                 className="self-stretch bg-nero-3-findora box-border h-[60px] flex items-start justify-start py-0 px-[15px] border-[1px] border-solid border-bianco-1-findora"
                 required
+                style={{
+                  color: "rgba(255, 255, 255, 0.50)",
+                  fontFamily: "Gotham",
+                  fontSize: "20px",
+                  fontStyle: "normal",
+                  fontWeight: "700",
+                  lineHeight: "normal",
+                }}
               />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] sm:px-[0rem] sm:w-full">
@@ -152,6 +176,14 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 placeholder="Condividi le tue aspettative, suggerimenti, feedback"
                 className="self-stretch bg-nero-3-findora box-border h-[180px] flex items-start justify-start p-[15px] border-[1px] border-solid border-bianco-1-findora"
                 required
+                style={{
+                  color: "rgba(255, 255, 255, 0.50)",
+                  fontFamily: "Gotham",
+                  fontSize: "20px",
+                  fontStyle: "normal",
+                  fontWeight: "700",
+                  lineHeight: "normal",
+                }}
               />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start py-2.5 px-[30px] box-border w-full sm:w-[370px] text-center text-13xl text-white sm:px-[0rem] sm:w-full">
@@ -159,7 +191,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
                 type="submit"
                 className="self-stretch bg-verde-1-findora h-[60px] flex items-start justify-start py-0 px-[15px] box-border cursor-pointer"
               >
-                <b className="relative flex items-center self-stretch justify-center flex-1">
+                <b className="relative flex items-center self-stretch justify-center flex-1 bianco-1-findora">
                   SUBMIT
                 </b>
               </button>
