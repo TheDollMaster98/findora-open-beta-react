@@ -70,7 +70,7 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ml:w-full">
       <form
         onSubmit={onSubmit}
-        className={`w-[840px] my-[120px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-[20px] border-[4px] border-solid border-nero-3-findora relative overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className} md:w-full md:h-full`}
+        className={`w-[840px] my-[120px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-[20px] border-[4px] border-solid border-nero-3-findora relative overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className} md:w-full md:h-full sm:overflow-y-scroll sm:pt-[130px]`}
       >
         <div className="self-stretch flex flex-col items-start justify-start py-[5px] relative gap-[35px]">
           <div className="self-stretch flex flex-row items-start justify-start z-[0]">

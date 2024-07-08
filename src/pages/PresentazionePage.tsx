@@ -64,7 +64,7 @@ const PresentazionePage: FunctionComponent<PresentazionePageType> = ({
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/WhmsONrEM1Q?si=TCs7lSdfmyT7uqT8&amp;start=58"
+              src="https://www.youtube.com/embed/EvAZK2G-om8?si=-lOiakliCrjD5sOS"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
