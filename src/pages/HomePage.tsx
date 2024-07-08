@@ -6,11 +6,17 @@ export type HomePageType = {
 
 const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
   return (
-    <div
-      className={`w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham ${className}`}
-      style={{ background: "linear-gradient(90deg, #1ab58a, #0e8cad)" }}
-    >
-      <div className="flex flex-col items-center justify-center flex-grow">
+    <div className="relative w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 z-0 object-cover w-full h-full"
+      >
+        <source src="./video/findora-landing-page.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 flex flex-col items-center justify-center flex-grow">
         <div className="flex flex-row items-center justify-center gap-[3.75rem] animate-fade-down animate-once animate-duration-1000 animate-ease-in-out md:gap-[0rem] sm:gap-[1rem]">
           <div className="flex flex-row items-center justify-center">
             <img
@@ -21,14 +27,14 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <img
-              className="w-[42.188rem] h-[9.375rem] md:w-[37.5rem] ml:w-[32.5rem] sm:w-[18.75rem] ss:w-[16rem] "
+              className="w-[42.188rem] h-[9.375rem] md:w-[37.5rem] ml:w-[32.5rem] sm:w-[18.75rem] ss:w-[16rem]"
               alt=""
               src="./group-136.svg"
             />
           </div>
         </div>
       </div>
-      <div className="pb-8 opacity-75 animate-bounce">
+      <div className="relative z-10 pb-8 opacity-75 animate-bounce">
         <div className="flex flex-row items-center justify-center p-[0.625rem]">
           <b className="relative">
             <p className="m-0">Scorri e scopri un mondo</p>
