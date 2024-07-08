@@ -6,7 +6,10 @@ export type HomePageType = {
 
 const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
   return (
-    <div className="relative w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham overflow-hidden">
+    <div
+      className="relative w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham overflow-hidden"
+      style={{ background: "linear-gradient(90deg, #1ab58a, #0e8cad)" }}
+    >
       <video
         autoPlay
         loop
@@ -14,7 +17,6 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
         className="absolute top-0 left-0 z-0 object-cover w-full h-full"
       >
         <source src="./video/findora-landing-page.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
       <div className="relative z-10 flex flex-col items-center justify-center flex-grow">
         <div className="flex flex-row items-center justify-center gap-[3.75rem] animate-fade-down animate-once animate-duration-1000 animate-ease-in-out md:gap-[0rem] sm:gap-[1rem]">
