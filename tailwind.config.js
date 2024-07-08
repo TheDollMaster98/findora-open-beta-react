@@ -59,6 +59,10 @@ module.exports = {
       },
       phone: {
         min: "500px",
+        max: "700px",
+      },
+      xss: {
+        max: "380px",
       },
     },
   },
