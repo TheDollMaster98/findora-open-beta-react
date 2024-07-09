@@ -70,13 +70,15 @@ const Form: FunctionComponent<FormType> = ({ className = "", onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ml:w-full">
       <form
         onSubmit={onSubmit}
-        className={`w-[840px] my-[120px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-[20px] border-[4px] border-solid border-nero-3-findora relative overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className} md:w-full md:h-full sm:overflow-y-scroll sm:pt-[13.125rem] ss:pt-[18rem] phone:pt-[15rem] xss:pt-[28rem]`}
+        className={`w-[840px] my-[120px] bg-nero-1-findora box-border flex flex-col items-center justify-center py-[30px] px-[20px] border-[4px] border-solid border-nero-3-findora relative overflow-hidden flex flex-col items-center justify-center text-center text-45xl text-white font-gotham ${className} md:w-full md:h-full sm:overflow-y-scroll sm:pt-[2.125rem] ss:pt-[7rem] phone:pt-[15rem] xss:pt-[18rem]`}
       >
         <div className="self-stretch flex flex-col items-start justify-start py-[5px] relative gap-[35px]">
           <div className="self-stretch flex flex-row items-start justify-start z-[0]">
             <div className="flex-1 flex flex-col items-start justify-start py-[15px] gap-[30px]">
-              <b className="relative self-stretch">LISTA D’ATTESA</b>
-              <div className="relative self-stretch text-xl">
+              <b className="relative self-stretch sm:text-3xl">
+                LISTA D’ATTESA
+              </b>
+              <div className="relative self-stretch text-xl sm:hidden">
                 <p>Entra e scopri un mondo di infinite opportunità</p>
               </div>
             </div>
