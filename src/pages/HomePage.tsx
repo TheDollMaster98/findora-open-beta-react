@@ -8,7 +8,8 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
   return (
     <div
       className="relative w-full h-screen flex flex-col justify-between text-center text-[1rem] text-white font-gotham overflow-hidden"
-      style={{ background: "linear-gradient(90deg, #1ab58a, #0e8cad)" }}
+      // style={{ background: "linear-gradient(90deg, #1ab58a, #0e8cad)" }}
+      style={{ background: "nero-1-findora" }}
     >
       <video
         autoPlay
