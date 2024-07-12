@@ -14,9 +14,10 @@ const HomePage: FunctionComponent<HomePageType> = ({ className = "" }) => {
         autoPlay
         loop
         muted
+        preload="auto"
         className="absolute top-0 left-0 z-0 object-cover w-full h-full"
       >
-        <source src="./video/findora-landing-page.mp4" type="video/mp4" />
+        <source src="./video/findora-landing-page.webm" type="video/mp4" />
       </video>
       <div className="relative z-10 flex flex-col items-center justify-center flex-grow">
         <div className="flex flex-row items-center justify-center gap-[3.75rem] animate-fade-down animate-once animate-duration-1000 animate-ease-in-out md:gap-[0rem] sm:gap-[1rem]">
