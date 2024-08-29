@@ -34,3 +34,49 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+
+/* WIP SCROLLBAR DA FAR VEDERE A DODO */
+
+/* global.css */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ab58a; /* verde-1-findora */
+
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #158f6d; /* Una tonalità più scura per l'effetto hover */
+  background-clip: content-box;
+}
+
+/* Stile per Firefox */
+* {
+  scrollbar-color: #1ab58a transparent;
+}
+
+/* Stile globale per la scrollbar */
+* {
+  scrollbar-color: #1ab58a transparent; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: auto; /* Mantiene la larghezza originale */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1ab58a; /* verde-1-findora */
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #158f6d; /* Una tonalità più scura per l'effetto hover */
+}
