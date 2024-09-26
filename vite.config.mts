@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-  base:
-    process.env.NODE_ENV === "production" ? "/findora-open-beta-react/" : "/",
+  // base: process.env.NODE_ENV === "production" ? "/" : "/",
+  base: "/",
 });
 
 //"predeploy": "cross-env NODE_ENV=production npm run build",

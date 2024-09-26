@@ -8,8 +8,11 @@ import {
 import FindoraLandingPage from "./pages/FindoraLandingPage";
 
 // Usa un baseUrl vuoto in produzione poiché ora il sito si trova alla root
-const baseUrl = process.env.NODE_ENV === "production" ? "" : "";
+// da usare con npm run predeploy:
+// const baseUrl = process.env.NODE_ENV === "production" ? "/" : "";
 
+// senza predeploy:
+const baseUrl = "/";
 function App() {
   const action = useNavigationType();
   const location = useLocation();
