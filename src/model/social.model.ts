@@ -20,7 +20,7 @@ export const socialLinks = [
     alt: "LinkedIn",
   },
   {
-    href: "https://www.twitch.tv/findorait",
+    href: "https://www.twitch.tv/officialfindora",
     src: "./socialLinks/twitch--logo-svg-1.svg",
     alt: "Twitch",
   },
