@@ -17,8 +17,12 @@ const Navbar: FunctionComponent<NavbarType> = ({ className = "" }) => {
     }
   }, []);
 
+  const formLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSeHanTUx1TcehFPSkBCR4cOxOfX9pzM7Ey33e1lWjPM03qQxg/viewform";
+
   const toggleForm = () => {
-    setShowForm(!showForm);
+    // setShowForm(!showForm);
+    window.open(formLink, "_blank");
   };
 
   const closeForm = () => {
